@@ -1,27 +1,75 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
+// import { Button, Card } from "react-bootstrap";
 import styles from "./Post.module.css";
 
 function Post() {
   return (
     <>
-      <div className={styles.news}>
-        <div className={styles.cardImg}>
-          <img className="" src="/img/clasesAJU.jpg" alt="clases en AJU" />
+      <article className={styles.cardGrid}>
+        <div className={styles.card}>
+          <div className={styles.cardHeader}>
+            <img className="" src="/img/clasesAJU.jpg" alt="clases en AJU" />
+          </div>
+          <div className={styles.cardBody}>
+            <div className={`${styles.cardTitle} text-center`}>Post Title</div>
+            <p className="text-center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
+              iure deserunt, sequi aspernatur vitae, iste quae eos dignissimos
+              aut at, necessitatibus autem earum fugiat inventore temporibus
+            </p>
+          </div>
+          <div className={styles.cardFooter}>
+            <span>
+              <i className="fas fa-user-circle"></i>
+            </span>
+            <span>
+              <i className="fas fa-calendar-alt"></i>
+            </span>
+          </div>
         </div>
-        <div className={styles.newsCardBody}>
-          <div className={styles.newsTitle}>Post Title</div>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
-            iure deserunt, sequi aspernatur vitae, iste quae eos dignissimos aut
-            at, necessitatibus autem earum fugiat inventore temporibus minus
-            quod hic expedita. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Accusamus amet dolorum sequi, facere commodi fuga
-            natus nisi eaque dolorem mollitia soluta nulla temporibus alias sint
-            odit, distinctio culpa officiis vitae!
-          </p>
+        <div className={styles.card}>
+          <div className={styles.cardHeader}>
+            <img className="" src="/img/clasesAJU.jpg" alt="clases en AJU" />
+          </div>
+          <div className={styles.cardBody}>
+            <div className={`${styles.cardTitle} text-center`}>Post Title</div>
+            <p className="text-center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
+              iure deserunt, sequi aspernatur vitae, iste quae eos dignissimos
+              aut at, necessitatibus autem earum fugiat inventore temporibus
+            </p>
+          </div>
+          <div className={styles.cardFooter}>
+            <span>
+              <i className="fas fa-user-circle"></i>
+            </span>
+            <span>
+              <i className="fas fa-calendar-alt"></i>
+            </span>
+          </div>
         </div>
-      </div>
+        <div className={styles.card}>
+          <div className={styles.cardHeader}>
+            <img className="" src="/img/clasesAJU.jpg" alt="clases en AJU" />
+          </div>
+          <div className={styles.cardBody}>
+            <div className={`${styles.cardTitle} text-center`}>Post Title</div>
+            <p className="text-center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
+              iure deserunt, sequi aspernatur vitae, iste quae eos dignissimos
+              aut at, necessitatibus autem earum fugiat inventore temporibus
+            </p>
+          </div>
+          <div className={styles.cardFooter}>
+            <span>
+              <i className="fas fa-user-circle"></i>
+            </span>
+            <span>
+              <i className="fas fa-calendar-alt"></i>
+            </span>
+          </div>
+        </div>
+      </article>
     </>
   );
 }
