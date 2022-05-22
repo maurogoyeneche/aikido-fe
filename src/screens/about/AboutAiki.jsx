@@ -2,14 +2,14 @@ import React from "react";
 
 const AboutAiki = () => {
   return (
-    <div className="row flex-column ">
-      <article className=" col-md-6  w-100 mb-5">
+    <div className="d-flex flex-column w-100 align-items-center">
+      <article className=" col-md-6  w-100 mb-5 mt-5">
         <h3 className="bg-dark text-light p-3 ">Filosofía</h3>
-        <div className="row justify-contnent-between align-items-center">
-          <div className="col-sm-6 col-md-3 col-lg-3 p-0 g-0 text-center">
+        <div className="row g-0 align-items-center">
+          <div className="col-sm-6 col-md-3 text-center">
             <img className="" src="img/img-aiki-daijin.png" alt="" />
           </div>
-          <div className="col-sm-6 col-md-9 col-lg-9">
+          <div className="col-sm-6 col-md-9 ">
             <p className="fs-4 text-start p-3 ">
               We preserve and share the great influence of my father Morihiro
               while remaining faithful to the technical and spiritual heritage
@@ -30,13 +30,13 @@ const AboutAiki = () => {
           </div>
         </div>
       </article>
-      <article className=" col-md-6 w-100 ">
+      <article className=" col-md-6  w-100 ">
         <h3 className="bg-dark text-light p-3">
           Más sobre Iwama ShinShin Aikishurenkai
         </h3>
-        <div className="row justify-contnent-between align-items-center pt-3 pb-3">
+        <div className="p-3">
           <iframe
-            width="1002"
+            width="100%"
             height="564"
             src="https://www.youtube.com/embed/CoUlKdN-kgQ"
             title="Entrevista a Saito Hitohira - Iwama ShinShin Aiki Shurenkai"

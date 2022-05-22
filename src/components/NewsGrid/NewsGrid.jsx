@@ -5,7 +5,7 @@ import Post from "../Post/Post";
 function NewsGrid({ post, posts }) {
   return (
     <>
-      <div className="ms-auto">
+      <div>
         {posts && (
           <>
             {posts.map((post) => (
