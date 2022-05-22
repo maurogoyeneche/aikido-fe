@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/styleHero.css";
+import "./styleHero.css";
 
 function Hero() {
   return <div className="hero"> </div>;

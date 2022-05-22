@@ -1,6 +1,7 @@
 import React from "react";
-import "../components/styles/styleNewsGrid.css";
-import Post from "../components/Post/Post";
+import "./styleNewsGrid.css";
+import Post from "../Post/Post";
+
 function NewsGrid({ post, posts }) {
   return (
     <>
