@@ -12,7 +12,7 @@ export default function NavbarMenu() {
         bg="dark"
         variant="dark"
         expand="lg"
-        className="sticky-top ps-3 pe-3"
+        className="sticky-top ps-3 pe-3 fw-bold"
       >
         {/* <Container> */}
         <Navbar.Brand>
