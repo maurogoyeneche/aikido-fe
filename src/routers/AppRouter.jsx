@@ -4,6 +4,7 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import PostList from "../components/PostList/PostList";
 import AboutAiki from "../screens/about/AboutAiki";
 import Home from "../screens/home/Home";
+import DojoDetails from "../screens/dojo/DojoDetails";
 
 const AppRouter = () => {
   return (
@@ -12,6 +13,7 @@ const AppRouter = () => {
         <Route exact path="/" element={<Home />}>
           <Route path="news" element={<PostList />} />
           <Route path="about" element={<AboutAiki />} />
+          <Route path="dojo" element={<DojoDetails />} />
         </Route>
 
         {/* <Route exact path="/about" element={<AboutAiki />} /> */}

@@ -26,7 +26,7 @@ export default function NavbarMenu() {
             <Link className="nav-link" to="news">
               News
             </Link>
-            <Link className="nav-link" to="#dojo">
+            <Link className="nav-link" to="dojo">
               Dojo
             </Link>
             <Link className="nav-link" to="about">
