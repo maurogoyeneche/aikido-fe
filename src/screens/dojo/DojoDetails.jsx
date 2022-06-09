@@ -5,7 +5,7 @@ import { Container, Image } from "react-bootstrap";
 const DojoDetails = () => {
   return (
     <>
-      <Container style={{ marginTop: "3rem" }}>
+      <Container style={{ marginTop: "1rem", maxWidth: "80%" }}>
         <h3 className={styles.articleTitle}>
           Shinshin Aiki Shuren Kai - Tres cruces
         </h3>
