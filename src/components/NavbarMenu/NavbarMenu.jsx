@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar, Container, Image } from "react-bootstrap";
+import { Nav, Navbar, Image } from "react-bootstrap";
 import "./styleNavbar.css";
 import { Link } from "react-router-dom";
 <Link to="#home" className="navbar-brand">
@@ -35,7 +35,7 @@ export default function NavbarMenu() {
             <Link className="nav-link" to="#galeria">
               Galeria
             </Link>
-            <Link className="nav-link" to="#contact">
+            <Link className="nav-link" to="contact">
               Contacto
             </Link>
           </Nav>
