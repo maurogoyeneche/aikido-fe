@@ -18,7 +18,7 @@ const DojoDetails = ({ dojo }) => {
   console.log(dojo);
   return (
     <>
-      <Container style={{ margin: "2rem 0", maxWidth: "80%" }}>
+      <Container className="mt-5 m-auto">
         <h3 className={styles.articleTitle}>
           {name} - {branch_off}
         </h3>
