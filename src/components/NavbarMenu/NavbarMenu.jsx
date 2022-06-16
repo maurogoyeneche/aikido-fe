@@ -2,9 +2,7 @@ import React from "react";
 import { Nav, Navbar, Image } from "react-bootstrap";
 import "./styleNavbar.css";
 import { Link } from "react-router-dom";
-<Link to="#home" className="navbar-brand">
-  <Image src="/img/iwamashinshinlogo-2.png" className="logo" />
-</Link>;
+
 export default function NavbarMenu() {
   return (
     <>

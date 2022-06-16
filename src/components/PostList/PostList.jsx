@@ -1,7 +1,7 @@
 import React from "react";
 import "./PostList.css";
 
-import { Container, Row, Col, CardGroup } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Post from "../Post/Post";
 
 function PostList({ post, posts }) {
