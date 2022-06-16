@@ -135,10 +135,24 @@ const ContactForm = () => {
             </sup>
 
             <Button
-              variant="dark"
-              className="w-25 d-block"
+              variant={
+                !errors.name &&
+                !errors.email &&
+                !errors.phone &&
+                !errors.message
+                  ? "dark"
+                  : "secondary"
+              }
+              className={" w-25 d-block"}
               type="submit"
-              disabled={isSubmitting}
+              disabled={
+                !errors.name &&
+                !errors.email &&
+                !errors.phone &&
+                !errors.message
+                  ? false
+                  : true
+              }
             >
               Enviar
             </Button>
