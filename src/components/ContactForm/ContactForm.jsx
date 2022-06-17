@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./ContactForm.module.css";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Button, Form as BootstrapForm } from "react-bootstrap";
@@ -11,7 +12,7 @@ const onSubmit = async (values) => {
 
 const MyInput = ({ label, field, ...props }) => {
   return (
-    <BootstrapForm.Group>
+    <BootstrapForm.Group className={styles.myInput}>
       <BootstrapForm.Label className="mb-0">{label}</BootstrapForm.Label>
       <BootstrapForm.Control {...field} {...props} />
     </BootstrapForm.Group>
@@ -19,7 +20,7 @@ const MyInput = ({ label, field, ...props }) => {
 };
 const MyTextAreaInput = ({ label, field, ...props }) => {
   return (
-    <BootstrapForm.Group>
+    <BootstrapForm.Group className={styles.myTextarea}>
       <BootstrapForm.Label className="mb-0">{label}</BootstrapForm.Label>
       <BootstrapForm.Control {...field} {...props} as="textarea" />
     </BootstrapForm.Group>
@@ -53,8 +54,10 @@ const ContactForm = () => {
             .max(32, "Debe tener un máximo 32 caracteres"),
           message: Yup.string()
             .required("Ingrese un mensaje")
+            .trim("No incluyas espacios en blanco al principio ni al final")
+            .strict(true)
             .matches(
-              /^(?!\s*$)[A-Za-zÀ-ÖØ-öø-ÿ0]*$/,
+              /^(?!\s*$)[A-Za-zÀ-ÖØ-öø-ÿ0.,\s]*$/,
               "Ingrese un mensáje válido, sin caracteres especiales"
             )
             .max(500, "Debe tener un máximo 500 caracteres"),

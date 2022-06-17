@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ContactForm from "../../components/NavbarMenu/ContactForm/ContactForm";
+import ContactForm from "../../components/ContactForm/ContactForm";
 import styles from "./ContactView.module.css";
 
 const ContactView = () => {
