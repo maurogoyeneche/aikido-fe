@@ -29,7 +29,7 @@ const MyTextAreaInput = ({ label, field, ...props }) => {
 
 const ContactForm = () => {
   return (
-    <div className="p-3">
+    <div className="ps-3 pe-3 ">
       <h5 className=" fw-bold mb-5 p-1 ps-3 text-white bg-dark">
         Envíanos tu consulta
       </h5>
