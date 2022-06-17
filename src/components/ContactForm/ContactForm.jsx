@@ -9,7 +9,7 @@ const onSubmit = async (values) => {
   //   await new Promise((resolve) => setTimeout(resolve, 1000));
   //   actions.resetForm();
 };
-
+// modularizar a custom UI
 const MyInput = ({ label, field, ...props }) => {
   return (
     <BootstrapForm.Group className={styles.myInput}>
@@ -29,8 +29,10 @@ const MyTextAreaInput = ({ label, field, ...props }) => {
 
 const ContactForm = () => {
   return (
-    <div>
-      <h5 className=" fw-bold mb-5">Envíanos tu consulta</h5>
+    <div className="p-3">
+      <h5 className=" fw-bold mb-5 p-1 ps-3 text-white bg-dark">
+        Envíanos tu consulta
+      </h5>
       <Formik
         initialValues={{ name: "", email: "", phone: "", message: "" }}
         validationSchema={Yup.object({
@@ -138,6 +140,7 @@ const ContactForm = () => {
             </sup>
 
             <Button
+              id={styles.submit}
               variant={
                 !errors.name &&
                 !errors.email &&
@@ -146,7 +149,7 @@ const ContactForm = () => {
                   ? "dark"
                   : "secondary"
               }
-              className={" w-25 d-block"}
+              className={`d-block ${styles.submit}`}
               type="submit"
               disabled={
                 !errors.name &&

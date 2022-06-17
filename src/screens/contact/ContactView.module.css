@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .articleTitle {
     height: 6vh;
     background-color: #212529;
@@ -6,4 +9,13 @@
     padding-left: 5%;
     display: flex;
     align-items: center;
+}
+.customCol{
+    padding: 0 2rem !important;
+}
+@media (max-width: 768px) {
+  
+   .customCol {
+       padding:0 !important;
+   }
 }
