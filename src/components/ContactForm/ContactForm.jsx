@@ -81,11 +81,7 @@ const ContactForm = () => {
               label="Nombre"
               value={values.name}
               component={MyInput}
-              className={
-                errors.name && touched.name
-                  ? "border-danger pt-2 pb-2"
-                  : "pt-2 pb-2"
-              }
+              className={errors.name && touched.name && "border-danger "}
             />
             <sup className={!errors.name ? "text-danger p-1" : "text-danger"}>
               {touched.name && errors.name}
@@ -97,11 +93,7 @@ const ContactForm = () => {
               placeholder="Ingrese su E-mail..."
               label="E-mail"
               component={MyInput}
-              className={
-                errors.email && touched.email
-                  ? "border-danger pt-2 pb-2"
-                  : "pt-2 pb-2"
-              }
+              className={errors.email && touched.email && "border-danger"}
             />
             <sup className={!errors.email ? "text-danger p-1" : "text-danger"}>
               {touched.email && errors.email}
@@ -112,11 +104,7 @@ const ContactForm = () => {
               placeholder="Ingrese su teléfono..."
               label="Teléfono"
               component={MyInput}
-              className={
-                errors.phone && touched.phone
-                  ? "border-danger pt-2 pb-2"
-                  : "pt-2 pb-2"
-              }
+              className={errors.phone && touched.phone && "border-danger"}
             />
             <sup className={!errors.phone ? "text-danger p-1" : "text-danger"}>
               {touched.phone && errors.phone}
@@ -126,15 +114,12 @@ const ContactForm = () => {
               name="message"
               placeholder="Ingrese un mensaje..."
               label="Mensaje"
-              className={
-                errors.message && touched.message
-                  ? "border-danger pt-2 pb-2"
-                  : "pt-2 pb-2"
-              }
+              rows="4"
+              className={errors.message || (touched.message && "border-danger")}
               component={MyTextAreaInput}
             />
             <sup
-              className={!errors.message ? "text-danger p-1" : "text-danger"}
+              className={!errors.message ? "text-danger p-1 " : "text-danger"}
             >
               {touched.message && errors.message}
             </sup>
