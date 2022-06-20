@@ -1,0 +1,31 @@
+// Listado de Dojos en Montevideo: 
+
+// * Dojo Jaime Cibils, a cargo de Aldo Villagra y Marcello Scarpa. 
+// Horarios: Lunes, miércoles y viernes de 20:30 a 22:30. 
+// Dirección: Jaime Cibils 2865a.
+// Contacto: 099193526 - 098345951.
+
+// * Dojo Complejo Bulevar Artigas, a cargo de Marcos Sosa.
+// Horarios: Lunes y miércoles de 20:30 a 21:45. 
+// Martes y jueves de 7:30 a 8:30. Viernes de 17:20 a 18:20. 
+// Dirección: Bv. Gral. Artigas 2498.
+// Contacto: 091461534.
+
+// * Yamato Dojo, a cargo de Andrés Camargo.
+// Horarios: martes y jueves de 20:30 a 22:00. 
+// Dirección: Pasaje Claudio García 980.
+// Contacto: 099507411.
+
+// * Dojo Colón, a cargo de Walter Moyano.
+
+// Horarios: 
+// - Dojo Asociación Japonesa en el Uruguay (AJU).
+// Jueves de 21:30 a 22:30hs.
+// - Dojo Colón Shinshin Aiki Shuren
+// Martes y Viernes de 19:30 a 21:30hs 
+// Contacto: 099290942.
+
+// - Dojo Federación Ancap, a cargo de Marcos Sosa.
+// Martes y jueves 15:30
+// Dirección: Agraciada y General Caraballo
+// Contacto: 091461534.

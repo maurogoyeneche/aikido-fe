@@ -6,6 +6,8 @@ import AboutAiki from "../screens/about/AboutAiki";
 import Home from "../screens/home/Home";
 import DojoDetails from "../screens/dojo/DojoDetails";
 import ContactView from "../screens/contact/ContactView";
+// import DojoDetails from "../screens/dojo/DojoDetails";
+import DojoList from "../components/DojoList/DojoList";
 
 const AppRouter = () => {
   return (
@@ -14,8 +16,8 @@ const AppRouter = () => {
         <Route exact path="/" element={<Home />}>
           <Route path="news" element={<PostList />} />
           <Route path="about" element={<AboutAiki />} />
-          <Route path="dojo" element={<DojoDetails />} />
           <Route path="contact" element={<ContactView />} />
+          <Route path="dojo" element={<DojoList />} />
         </Route>
       </Routes>
     </Router>

@@ -2,20 +2,33 @@ import React from "react";
 import styles from "./DojoDetails.module.css";
 import { Container, Image } from "react-bootstrap";
 
-const DojoDetails = () => {
+const DojoDetails = ({ dojo }) => {
+  const {
+    name,
+    branch_off,
+    days,
+    image,
+    hours,
+    address,
+    gmap_src,
+    phone,
+    phone_other,
+    sensei,
+  } = dojo;
+  console.log(dojo);
   return (
     <>
-      <Container style={{ marginTop: "1rem", maxWidth: "80%" }}>
+      <Container className="mt-5 m-auto">
         <h3 className={styles.articleTitle}>
-          Shinshin Aiki Shuren Kai - Tres cruces
+          {name} - {branch_off}
         </h3>
         <article className={styles.articleCard}>
           <div className={styles.articleContent}>
-            <Image src="../../img/logo_iwama_ryu.png" className={styles.img} />
+            <Image src={image} className={styles.img} />
 
             <iframe
               title="dojo"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3202.3688080438924!2d-56.16595213012299!3d-34.89412717934591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2suy!4v1653855476632!5m2!1ses-419!2suy"
+              src={gmap_src}
               width="100%"
               height="100%"
               loading="lazy"
@@ -25,24 +38,36 @@ const DojoDetails = () => {
           <div className={styles.articleDetails}>
             <ul>
               <li>
-                <b>Direccion:</b> Bvar. Artigas 1825, Entre Goes y Dr. Salvador
-                Ferrer Serra, Montevideo
+                <b>Direccion:</b> {address}
+              </li>
+              <li>
+                <b>Días:</b>{" "}
+                {days.map((day) => (
+                  <span>{day} |</span>
+                ))}
+              </li>
+              <li>
+                <b>Horario:</b> {hours}
               </li>
 
               <li>
-                <b>Profesor:</b> Masashi Okubo
+                <b>Sensei:</b>{" "}
+                {sensei.map((sensei) => (
+                  <span> {sensei} | </span>
+                ))}
               </li>
 
               <li>
-                <b>Telefono:</b> (+598) 12 030 405
+                <b>Telefono/s:</b> {phone} | {phone_other}
               </li>
 
               <li>
-                <b>E-mail:</b> aikido@aikido.com.uy
+                <b>E-mail:</b> info@aikidouruguay.com
               </li>
 
               <li>
-                <b>Website:</b> _____________________
+                <b>Website:</b>{" "}
+                <a href="www.aikidouruguay.com">www.aikidouruguay.com</a>
               </li>
             </ul>
           </div>
