@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+.articleTitle {
+    height: 6vh;
+    background-color: #212529;
+    color: white;
+    font-size: 2rem;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+}
+.customCol{
+    padding: 2rem 2rem 2rem .5rem !important;
+    border-right: 0.5px solid  #e4e4e4;
+    
+}
+.customCol2{
+    padding: 2rem .5rem 2rem 2rem!important;
+}
+@media (max-width: 768px) {
+  
+   .customCol {
+       padding:0 !important;
+       border-right: unset;
+       order: 2;
+       
+   }
+   .customCol2{
+    padding:0 !important;
+    background-color: #f8f9fa!important;
+    order:1
+   }
+
+}
