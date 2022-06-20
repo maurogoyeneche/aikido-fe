@@ -23,11 +23,13 @@
    .customCol {
        padding:0 !important;
        border-right: unset;
+       order: 2;
        
    }
    .customCol2{
     padding:0 !important;
     background-color: #f8f9fa!important;
+    order:1
    }
 
 }

@@ -9,7 +9,7 @@ const onSubmit = async (values) => {
   //   await new Promise((resolve) => setTimeout(resolve, 1000));
   //   actions.resetForm();
 };
-// modularizar a custom UI
+//TODO: modularizar a custom UI
 const MyInput = ({ label, field, ...props }) => {
   return (
     <BootstrapForm.Group className={styles.myInput}>
