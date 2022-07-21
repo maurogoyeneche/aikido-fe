@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import styles from "./ContactForm.module.css";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Button, Form as BootstrapForm } from "react-bootstrap";
+import { Button, Form as BootstrapForm, Spinner } from "react-bootstrap";
+import axios from "axios";
 
-const onSubmit = async (values) => {
-  console.log(values);
-  //   await new Promise((resolve) => setTimeout(resolve, 1000));
-  //   actions.resetForm();
-};
 //TODO: modularizar a custom UI
 const MyInput = ({ label, field, ...props }) => {
   return (
@@ -28,6 +24,26 @@ const MyTextAreaInput = ({ label, field, ...props }) => {
 };
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
+
+  const sendMail = async (values) => {
+    try {
+      setLoading(true);
+      const res = await axios({
+        method: "post",
+        url: "http://localhost:3000/send-mail",
+        data: { ...values },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleSubmit = async (values) => {
+    await sendMail(values);
+
+    setLoading(false);
+  };
+
   return (
     <div className="ps-3 pe-3 ">
       <h5 className=" fw-bold mb-5 p-1 ps-3 text-white bg-dark">
@@ -64,13 +80,15 @@ const ContactForm = () => {
             )
             .max(500, "Debe tener un máximo 500 caracteres"),
         })}
-        onSubmit={onSubmit}
+        onSubmit={(values, { resetForm }) => {
+          handleSubmit(values);
+          resetForm();
+        }}
       >
         {({
           values,
           errors,
           touched,
-          isSubmitting,
           /* and other goodies */
         }) => (
           <Form>
@@ -127,6 +145,7 @@ const ContactForm = () => {
             <Button
               id={styles.submit}
               variant={
+                !loading &&
                 !errors.name &&
                 !errors.email &&
                 !errors.phone &&
@@ -137,6 +156,7 @@ const ContactForm = () => {
               className={`d-block ${styles.submit}`}
               type="submit"
               disabled={
+                !loading &&
                 !errors.name &&
                 !errors.email &&
                 !errors.phone &&
@@ -145,7 +165,11 @@ const ContactForm = () => {
                   : true
               }
             >
-              Enviar
+              {loading ? (
+                <Spinner animation="border" variant="light" />
+              ) : (
+                "Enviar"
+              )}
             </Button>
           </Form>
         )}
