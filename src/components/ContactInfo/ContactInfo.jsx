@@ -15,7 +15,7 @@ const ContactInfo = () => {
             <dt className="me-3">
               <GeoAlt />
             </dt>
-            <dd>Direcion Lorem ipsum dolor sit amet.</dd>
+            <dd>Dirección Lorem ipsum dolor sit amet.</dd>
           </dl>
           <dl className="d-flex">
             <dt className="me-3">
