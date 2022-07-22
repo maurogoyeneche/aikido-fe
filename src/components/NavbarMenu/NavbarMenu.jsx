@@ -27,15 +27,15 @@ export default function NavbarMenu() {
             <Link className="nav-link" to="about">
               Sobre Aikido
             </Link>
-            <Link className="nav-link" to="dojo">
+            {/* <Link className="nav-link" to="dojo">
               Dojo
-            </Link>
+            </Link> */}
             {/* <Link className="nav-link" to="#galeria">
               Galeria
             </Link> */}
-            <Link className="nav-link" to="contact">
+            {/* <Link className="nav-link" to="contact">
               Contacto
-            </Link>
+            </Link> */}
           </Nav>
         </Navbar.Collapse>
         {/* </Container> */}

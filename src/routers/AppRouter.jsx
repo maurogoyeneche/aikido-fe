@@ -15,8 +15,9 @@ const AppRouter = () => {
       <Routes>
         <Route exact path="/" element={<Home />}>
           {/* <Route path="news" element={<PostList />} /> */}
+          <Route index element={<AboutAiki />} />
           <Route path="about" element={<AboutAiki />} />
-          <Route index element={<ContactView />} />
+          {/* <Route index element={<ContactView />} /> */}
           <Route path="contact" element={<ContactView />} />
           <Route path="dojo" element={<DojoList />} />
           <Route path="*" element={<ContactView />} />
