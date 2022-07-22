@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./ContactForm.module.css";
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import { Button, Form as BootstrapForm, Spinner } from "react-bootstrap";
 import axios from "axios";
@@ -29,12 +29,13 @@ const ContactForm = () => {
   const sendMail = async (values) => {
     try {
       setLoading(true);
-      const res = await axios({
+      await axios({
         method: "post",
-        url: "http://localhost:3000/send-mail",
+        url: "https://aikido-be.vercel.app/send-mail",
         data: { ...values },
       });
     } catch (error) {
+      // throw new Error({ message: "Error sending mail" });
       console.log(error);
     }
   };
@@ -43,7 +44,7 @@ const ContactForm = () => {
       await sendMail(values);
       setLoading(false);
     } else {
-      throw { message: "Get out of here!" };
+      throw new Error({ message: "Get out of here!" });
     }
   };
 

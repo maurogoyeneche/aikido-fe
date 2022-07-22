@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import ContactInfo from "../../components/ContactInfo/ContactInfo";
 import styles from "./ContactView.module.css";

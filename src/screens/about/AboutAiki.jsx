@@ -13,15 +13,16 @@ const AboutAiki = () => {
             </div>
             <div className="col-sm-6 col-md-9 ">
               <p className="fs-4 text-start p-4 ">
-                We preserve and share the great influence of my father Morihiro
-                while remaining faithful to the technical and spiritual heritage
-                left by the Founder Morihei Ueshiba.
+                Conservamos y compartimos la gran influencia de mi padre
+                Morihiro manteniéndonos fiel a la herencia técnica y a la
+                espiritualidad dejada por el Fundador Morihei Ueshiba.
               </p>
               <p className="fs-4  text-start p-4 ">
-                We continually try to improve ourselves through the intensive
-                and systematic practice of kihon , and we believe each training
-                session is a unique opportunity to feel closer to the Founder. I
-                firstly apply this permanent training to myself.
+                Continuamente tratamos de mejorarnos a nosotros mismos a través
+                del intensivo y práctico sistemática de kihon. Creemos que cada
+                entrenamiento y cada sesión es una oportunidad única para
+                sentirse más cerca del Fundador. Yo soy el primero en aplicar
+                día a día, este entrenamiento constante.
               </p>
               <p className="fs-4  text-end p-4">
                 Hitohira Saito{" "}

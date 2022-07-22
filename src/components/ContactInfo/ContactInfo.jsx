@@ -1,6 +1,6 @@
 import React from "react";
-import { Figure, Image } from "react-bootstrap";
-import * as Icon from "react-bootstrap-icons";
+import { Figure } from "react-bootstrap";
+// import * as Icon from "react-bootstrap-icons";
 import { GeoAlt, TelephoneFill, Envelope } from "react-bootstrap-icons";
 
 const ContactInfo = () => {
