@@ -1,16 +1,31 @@
 .hero {
   background-color: black;
   height: 450px;
-  background-image: url(https://iwamashinshinaikido.com/wp-content/uploads/section_03.jpg);
+  background-image: url(https://iwamashinshinaikido.com/wp-content/uploads/2017/09/iwamadojo10.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100%;
+  display:flex;
+  position:relative;
+  justify-content:center;
+  align-items:center;
 }
-.hero2 {
+
+.hero-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   background-color: black;
-  height: 450px;
-  background-image: url(https://iwamashinshinaikido.com/wp-content/uploads/section_03.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: none;
+  opacity: 0.6;
+}
+.hero-title {
+  color: white;
+  text-shadow: black 1px 1px 10px;
+  width: 100%;
+  position:absolute;
+  background-color: black;
+  
 }

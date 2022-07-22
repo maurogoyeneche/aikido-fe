@@ -6,7 +6,12 @@ function Hero() {
   return (
     <>
       {/* <CarouselHeader /> */}
-      <div className="hero"> </div>
+      <div className="hero">
+        <div className="hero-title-container"></div>
+        <h1 className="hero-title text-center fw-bold">
+          Sitio en Construcción
+        </h1>
+      </div>
     </>
   );
 }
