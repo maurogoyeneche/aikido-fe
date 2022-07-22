@@ -39,18 +39,27 @@ const ContactForm = () => {
     }
   };
   const handleSubmit = async (values) => {
-    await sendMail(values);
-
-    setLoading(false);
+    if (values.surname === "") {
+      await sendMail(values);
+      setLoading(false);
+    } else {
+      throw { message: "Get out of here!" };
+    }
   };
 
   return (
     <div className="ps-3 pe-3 ">
-      <h5 className=" fw-bold mb-5 p-1 ps-3 text-white bg-dark">
+      <h5 className=" fw-bold mb-4 p-1 ps-3 text-white bg-dark">
         Envíanos tu consulta
       </h5>
       <Formik
-        initialValues={{ name: "", email: "", phone: "", message: "" }}
+        initialValues={{
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          surname: "",
+        }}
         validationSchema={Yup.object({
           name: Yup.string()
             .required("Ingrese un nombre")
@@ -79,6 +88,10 @@ const ContactForm = () => {
               "Ingrese un mensáje válido, sin caracteres especiales"
             )
             .max(500, "Debe tener un máximo 500 caracteres"),
+          surname: Yup.string()
+            .trim()
+            .strict(true)
+            .matches(/^(?!\s*$)[A-Za-zÀ-ÖØ-öø-ÿ\s]*$/, "Ingrese solo letras"),
         })}
         onSubmit={(values, { resetForm }) => {
           handleSubmit(values);
@@ -94,6 +107,15 @@ const ContactForm = () => {
           <Form>
             <Field
               type="text"
+              name="surname"
+              value={values.surname}
+              component={MyInput}
+              placeholder="do not complete if you are a human"
+              style={{ margin: 0, padding: 0, gap: 0 }}
+              hidden
+            />
+            <Field
+              type="text"
               name="name"
               placeholder="Ingrese su nombre..."
               label="Nombre"
@@ -101,9 +123,9 @@ const ContactForm = () => {
               component={MyInput}
               className={errors.name && touched.name && "border-danger "}
             />
-            <sup className={!errors.name ? "text-danger p-1" : "text-danger"}>
+            <span className={!errors.name ? "text-danger p-1" : "text-danger"}>
               {touched.name && errors.name}
-            </sup>
+            </span>
 
             <Field
               type="email"
@@ -113,9 +135,9 @@ const ContactForm = () => {
               component={MyInput}
               className={errors.email && touched.email && "border-danger"}
             />
-            <sup className={!errors.email ? "text-danger p-1" : "text-danger"}>
+            <span className={!errors.email ? "text-danger p-1" : "text-danger"}>
               {touched.email && errors.email}
-            </sup>
+            </span>
             <Field
               type="number"
               name="phone"
@@ -124,9 +146,9 @@ const ContactForm = () => {
               component={MyInput}
               className={errors.phone && touched.phone && "border-danger"}
             />
-            <sup className={!errors.phone ? "text-danger p-1" : "text-danger"}>
+            <span className={!errors.phone ? "text-danger p-1" : "text-danger"}>
               {touched.phone && errors.phone}
-            </sup>
+            </span>
             <Field
               as="textarea"
               name="message"
@@ -136,11 +158,11 @@ const ContactForm = () => {
               className={errors.message || (touched.message && "border-danger")}
               component={MyTextAreaInput}
             />
-            <sup
+            <span
               className={!errors.message ? "text-danger p-1 " : "text-danger"}
             >
               {touched.message && errors.message}
-            </sup>
+            </span>
 
             <Button
               id={styles.submit}
