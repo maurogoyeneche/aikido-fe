@@ -1,5 +1,6 @@
 import React from "react";
 import { Figure } from "react-bootstrap";
+import styles from "./ContactInfo.module.css";
 // import * as Icon from "react-bootstrap-icons";
 import { GeoAlt, TelephoneFill, Envelope } from "react-bootstrap-icons";
 
@@ -8,14 +9,14 @@ const ContactInfo = () => {
     <>
       <div className=" ps-3 pe-3 h-100 d-flex flex-column justify-content-between align-items-baseline">
         <div className="w-100">
-          <h5 className=" fw-bold mb-5 p-1 ps-3 text-white bg-dark">
+          <h5 className=" fw-bold mb-5 p-2 ps-3 text-white bg-dark">
             Información de contacto
           </h5>
           <dl className="d-flex">
             <dt className="me-3">
               <GeoAlt />
             </dt>
-            <dd>Dirección Lorem ipsum dolor sit amet.</dd>
+            <dd>Bv. Gral. Artigas 2498</dd>
           </dl>
           <dl className="d-flex">
             <dt className="me-3">
@@ -25,10 +26,13 @@ const ContactInfo = () => {
           </dl>
           <dl className="d-flex">
             <dt className="me-3">
-              {" "}
-              <Envelope />{" "}
+              <Envelope />
             </dt>
-            <dd>marcosjsosa@gmail.com</dd>
+            <dd>
+              <a className={styles.link} href="mailto:marcosjsosa@gmail.com  ">
+                marcosjsosa@gmail.com{" "}
+              </a>
+            </dd>
           </dl>
         </div>
         <Figure className="m-0">
