@@ -1,0 +1,25 @@
+.toast{
+  position:fixed;
+  bottom: 1rem;
+  right: 1rem !important;
+  height: 60px;
+  width: 18rem !important;  
+}
+@media screen and (max-width: 281px) {
+  .toast{
+    width: 100% !important;
+    margin: 0 auto;
+    bottom:0;
+    right: 0 !important;
+
+  }
+}
+@media (min-width: 281px)and (max-width: 539px) {
+  .toast{
+    width: 100% !important;
+    right: 0 !important;
+    bottom:0;
+   
+  }
+}
+

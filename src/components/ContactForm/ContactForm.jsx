@@ -23,8 +23,10 @@ const MyTextAreaInput = ({ label, field, ...props }) => {
   );
 };
 
-const ContactForm = () => {
+const ContactForm = ({ setShow, setStatus }) => {
   const [loading, setLoading] = useState(false);
+
+  const error = new Error({ message: "Get out of here!" });
 
   const sendMail = async (values) => {
     try {
@@ -34,9 +36,12 @@ const ContactForm = () => {
         url: "https://aikido-be.vercel.app/send-mail",
         data: { ...values },
       });
+      setStatus("success");
+      setShow(true);
     } catch (error) {
-      // throw new Error({ message: "Error sending mail" });
-      console.log(error);
+      setStatus("danger");
+      setShow(true);
+      throw error;
     }
   };
   const handleSubmit = async (values) => {
@@ -44,13 +49,16 @@ const ContactForm = () => {
       await sendMail(values);
       setLoading(false);
     } else {
-      throw new Error({ message: "Get out of here!" });
+      setShow(true);
+      setStatus("danger");
+
+      throw error;
     }
   };
 
   return (
     <div className="ps-3 pe-3 ">
-      <h5 className=" fw-bold mb-4 p-1 ps-3 text-white bg-dark">
+      <h5 className=" fw-bold mb-4 p-2 ps-3 text-white bg-dark">
         Envíanos tu consulta
       </h5>
       <Formik
@@ -176,7 +184,7 @@ const ContactForm = () => {
                   ? "dark"
                   : "secondary"
               }
-              className={`d-block ${styles.submit}`}
+              className={`d-block ${styles.submit} p-2 fs-4`}
               type="submit"
               disabled={
                 !loading &&
