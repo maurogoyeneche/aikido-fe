@@ -52,7 +52,7 @@ const ContactForm = ({ setShow, setStatus }) => {
       setShow(true);
       setStatus("danger");
 
-      throw error;
+      throw "Get out of here!";
     }
   };
 

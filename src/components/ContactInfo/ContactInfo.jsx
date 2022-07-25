@@ -22,7 +22,11 @@ const ContactInfo = () => {
             <dt className="me-3">
               <TelephoneFill />
             </dt>
-            <dd>+598 91 461 534</dd>
+            <dd>
+              <a className={styles.link} href="https://wa.link/6w0di4">
+                +598 91 461 534
+              </a>
+            </dd>
           </dl>
           <dl className="d-flex">
             <dt className="me-3">

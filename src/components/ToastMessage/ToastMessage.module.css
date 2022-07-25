@@ -4,6 +4,7 @@
   right: 1rem !important;
   height: 60px;
   width: 18rem !important;  
+  z-index: 1000;
 }
 @media screen and (max-width: 281px) {
   .toast{
