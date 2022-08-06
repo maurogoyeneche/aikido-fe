@@ -1,18 +1,22 @@
 import React from "react";
-// import CarouselHeader from "../CarouselHeader/CarouselHeader";
-import "./styleHero.css";
+import style from "./Hero.module.css";
+import { Container } from "react-bootstrap";
 
-function Hero() {
+function Hero({ news }) {
   return (
-    <>
-      {/* <CarouselHeader /> */}
-      <div className="hero">
-        <div className="hero-title-container"></div>
-        <h1 className="hero-title text-center fw-bold">
-          Sitio en Construcción
-        </h1>
+    <Container>
+      <div className={style.hero}>
+        <div className={style.heroImage}>
+          <img src="" alt="Hero Image" />
+        </div>
+        <div className={style.heroTitle}>
+          <h1>AIKIDO</h1>
+          {news.map((noticia) => (
+            <p className={style.heroContent}>{noticia}</p>
+          ))}
+        </div>
       </div>
-    </>
+    </Container>
   );
 }
 

@@ -1,0 +1,27 @@
+.hero {
+  background-color: black;
+  height: 450px;
+  width: 100%;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.heroImage{
+  border: 1px solid white;
+  height: 400px;
+  width: 400px;
+
+}
+.heroTitle > h1{
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  
+} 
+.heroContent{
+  color: white;
+}
+ 
+
+
+
