@@ -1,0 +1,39 @@
+.hero { 
+  background-color: black;
+  height: 92.6vh;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Montserrat';
+  color: white;
+}
+.hero div{
+  padding: 20px;
+}
+.hero div h1{
+  font-weight: 900;
+  font-size: 40px;
+  
+}
+.hero div:nth-child(1){
+  font-weight: 900;
+}
+.hero div h4{
+  margin-top: -10px;
+  font-size: 14px;
+  max-width: 50ch;
+}
+
+.contactanos{
+  background-color: #0000FE;
+  color: white;
+  font-size: 20px;
+  padding:4px 16px 4px 16px;
+}
+.contactanos:hover{
+  background-color: rgba(66, 66, 255, 0.79);
+}
+.hero img{
+  width: 300px;
+}
