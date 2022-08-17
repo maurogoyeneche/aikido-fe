@@ -1,16 +1,15 @@
 import React from "react";
-// import CarouselHeader from "../CarouselHeader/CarouselHeader";
-import "./styleHero.css";
+import styles from "./Hero.module.css";
 
 function Hero() {
   return (
     <>
-      {/* <CarouselHeader /> */}
-      <div className="hero">
-        <div className="hero-title-container"></div>
-        <h1 className="hero-title text-center fw-bold">
-          Sitio en Construcción
-        </h1>
+      <div className={styles.hero}>
+        <div>
+          <h1>AIKIDO TRADICIONAL</h1>
+          <h4>Alumnos directos de Hitohira Saito soke.</h4>
+          <button>CONTACTANOS</button>
+        </div>
       </div>
     </>
   );
