@@ -1,7 +1,10 @@
 import React from "react";
-import styles from './Hero.module.css';
 
-function Hero() {
+import style from "./Hero.module.css";
+
+
+
+function Hero({ news }) {
   return (
     <>
       <div className={ styles.hero }>
@@ -13,7 +16,6 @@ function Hero() {
           <button>CONTACTANOS</button>
         </div>
       </div>
-    </>
   );
 }
 
