@@ -39,7 +39,8 @@ const ContactInfo = () => {
           <Figure.Image
             src="img/Kanji-Aikido-PNG-Download-Image.png"
             alt="Aikido"
-            className="m-0"
+            className={`${styles.contactInfoImg} m-0`}
+            id="contact-info-img"
           />
         </Figure>
       </div>

@@ -17,58 +17,52 @@ const DojoDetails = ({ dojo }) => {
   } = dojo;
 
   return (
-    <Container className="mt-5 m-auto">
-      <h3 className={styles.articleTitle}>
+    <Container className="mt-5 mb-5 m-auto">
+      {/* <h3 className={styles.articleTitle}>
         {name} - {branch_off}
-      </h3>
+      </h3> */}
       <article className={styles.articleCard}>
         <div className={styles.articleContent}>
-          <Image src={image} className={styles.img} />
-
           <iframe
-            title="dojo"
             src={gmap_src}
             width="100%"
             height="100%"
+            style={{ border: 0, height: "100%" }}
+            allowfullscreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
         <div className={styles.articleDetails}>
-          <ul>
-            <li>
-              <b>Direccion:</b> {address}
-            </li>
-            <li>
-              <b>Días:</b>{" "}
-              {days.map((day) => (
-                <span>{day} |</span>
-              ))}
-            </li>
-            <li>
-              <b>Horario:</b> {hours}
-            </li>
-
-            <li>
-              <b>Sensei:</b>{" "}
-              {sensei.map((sensei) => (
-                <span> {sensei} | </span>
-              ))}
-            </li>
-
-            <li>
-              <b>Telefono/s:</b> {phone} | {phone_other}
-            </li>
-
-            <li>
-              <b>E-mail:</b> info@aikidouruguay.com
-            </li>
-
-            <li>
-              <b>Website:</b>{" "}
-              <a href="www.aikidouruguay.com">www.aikidouruguay.com</a>
-            </li>
-          </ul>
+          <div className="mb-3">
+            <h3 className="m-0">
+              <strong>Direccion: </strong>
+            </h3>
+            {address}
+            Telefono/s:
+            {phone} | {phone_other}
+          </div>
+          <div className="mb-3">
+            <h6 className="m-0 ">
+              <strong>Dias y Horarios: </strong>{" "}
+            </h6>
+            {days.map((day, index) => (
+              <span>{index == 0 ? `${day} y ` : `${day} `}</span>
+            ))}
+            de {hours}
+          </div>
+          <div>
+            <h3 className="m-0">
+              <strong>Representante</strong>
+            </h3>
+            {sensei.map((sensei, index) => (
+              <span> {index == 0 ? `${sensei} & ` : sensei}</span>
+            ))}
+            <h6 className="m-0 mt-3">
+              <strong>E-mail:</strong>
+            </h6>
+            info@aikidouruguay.com
+          </div>
         </div>
       </article>
     </Container>
