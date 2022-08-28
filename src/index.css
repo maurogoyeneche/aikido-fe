@@ -24,6 +24,9 @@ code {
 .swiper-pagination {
   bottom: 0 !important;
 }
+.swiper-slide {
+  padding: 1rem 0 1rem 0 !important;
+}
 @media (max-width: 890px) {
   .swiper-button-next {
     display: none !important;
