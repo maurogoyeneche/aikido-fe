@@ -58,12 +58,12 @@ const DojoDetails = ({ dojo }) => {
               <strong>Representante</strong>
             </h3>
             {sensei.map((sensei, index) => (
-              <span> {index == 0 ? `${sensei} & ` : sensei}</span>
+              <span> {index == 0 ? sensei : ` & ${sensei}`}</span>
             ))}
-            <h6 className="m-0 mt-3">
+            {/* <h6 className="m-0 mt-3">
               <strong>E-mail:</strong>
             </h6>
-            info@aikidouruguay.com
+            info@aikidouruguay.com */}
           </div>
         </div>
       </article>
