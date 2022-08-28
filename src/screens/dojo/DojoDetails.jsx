@@ -18,9 +18,7 @@ const DojoDetails = ({ dojo }) => {
 
   return (
     <Container className="mt-3 mb-3 m-auto">
-      <h3 className={styles.articleTitle}>
-        {name} - {branch_off}
-      </h3>
+      <h3 className={styles.articleTitle}>{branch_off}</h3>
       <article className={styles.articleCard}>
         <div className={styles.articleContent}>
           <iframe
