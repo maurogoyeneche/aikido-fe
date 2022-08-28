@@ -18,15 +18,15 @@ export default function NavbarMenu() {
             <Image src="/img/iwamashinshinlogo-2.png" className="logo" />
           </Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             {/* <Link className="nav-link" to="news">
               News
             </Link> */}
-            <Link className="nav-link" to="about">
+            {/* <Link className="nav-link" to="about">
               Sobre Aikido
-            </Link>
+            </Link> */}
             {/* <Link className="nav-link" to="dojo">
               Dojo
             </Link> */}
