@@ -17,10 +17,10 @@ const DojoDetails = ({ dojo }) => {
   } = dojo;
 
   return (
-    <Container className="mt-5 mb-5 m-auto">
-      {/* <h3 className={styles.articleTitle}>
+    <Container className="mt-3 mb-3 m-auto">
+      <h3 className={styles.articleTitle}>
         {name} - {branch_off}
-      </h3> */}
+      </h3>
       <article className={styles.articleCard}>
         <div className={styles.articleContent}>
           <iframe
@@ -39,8 +39,10 @@ const DojoDetails = ({ dojo }) => {
               <strong>Direccion: </strong>
             </h3>
             {address}
-            Telefono/s:
-            {phone} | {phone_other}
+            <h6 className="mt-3">
+              <strong>Telefono/s:</strong>
+            </h6>
+            <p className="m-0 p-0">{phone}</p>
           </div>
           <div className="mb-3">
             <h6 className="m-0 ">
@@ -51,7 +53,7 @@ const DojoDetails = ({ dojo }) => {
             ))}
             de {hours}
           </div>
-          <div>
+          <div className="">
             <h3 className="m-0">
               <strong>Representante</strong>
             </h3>

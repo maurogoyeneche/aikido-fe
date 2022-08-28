@@ -1,19 +1,6 @@
 export const dojos = [
   {
     name: "Uruguay Aiki Shurendojo",
-    branch_off: "La Blanqueada",
-    days: ["Lunes", "Miércoles"],
-    hours: "20:30 a 22:30",
-    address: "Jaime Cibils 2865a",
-    gmap_src:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6545.837527811679!2d-56.162121695766366!3d-34.8833861864459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80f975a2b16d%3A0xeb3e4252e46966e6!2sURUGUAY%20AIKI%20SHUREN%20DOJO!5e0!3m2!1ses-419!2suy!4v1654909702367!5m2!1ses-419!2suy",
-    phone: "099193526",
-    phone_other: "098345951",
-    sensei: ["Aldo Villagra", "Marcello Scarpa"],
-    image: "../../img/logo_iwama_ryu.png",
-  },
-  {
-    name: "Uruguay Aiki Shurendojo",
     branch_off: "Complejo Bvd. Artigas",
     days: ["Lunes", "Miércoles"],
     hours: "20:30 a 21:45",
@@ -25,6 +12,20 @@ export const dojos = [
     sensei: ["Marcos Sosa"],
     image: "../../img/logo_iwama_ryu.png",
   },
+  {
+    name: "Uruguay Aiki Shurendojo",
+    branch_off: "La Blanqueada",
+    days: ["Lunes", "Miércoles"],
+    hours: "20:30 a 22:30",
+    address: "Jaime Cibils 2865a",
+    gmap_src:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6545.837527811679!2d-56.162121695766366!3d-34.8833861864459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80f975a2b16d%3A0xeb3e4252e46966e6!2sURUGUAY%20AIKI%20SHUREN%20DOJO!5e0!3m2!1ses-419!2suy!4v1654909702367!5m2!1ses-419!2suy",
+    phone: "099193526",
+    phone_other: "098345951",
+    sensei: ["Aldo Villagra", "Marcello Scarpa"],
+    image: "../../img/logo_iwama_ryu.png",
+  },
+
   {
     name: "Uruguay Aiki Shurendojo",
     branch_off: "Yamato Dojo",

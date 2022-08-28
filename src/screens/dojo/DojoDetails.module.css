@@ -3,9 +3,9 @@
   justify-content: space-between;
   margin: 0 auto;
   height: 100%;
-  max-width: 70%;
+  width: 100%;
   background-color: #353535e6;
-  box-shadow: 5px 3px 10px 5px rgba(255, 255, 255, 0.264);
+  /* box-shadow: 5px 3px 10px 5px rgba(255, 255, 255, 0.264); */
   border-radius: 4px;
   overflow: hidden;
 }
@@ -17,6 +17,7 @@
   padding-left: 2%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .articleContent {
@@ -48,11 +49,18 @@
 }
 
 /* Responsive for Dojos page */
-/* @media (max-width: 890px) {
+@media (max-width: 890px) {
   .articleCard {
-    height: 100%;
-    font-size: 0.9rem;
+    width: 100%;
+    font-size: 1rem;
   }
+  .articleTitle {
+    font-size: 1.3rem;
+    height: 6vh;
+    width: 100%;
+    text-align: center;
+  }
+} /*
   .articleContent {
     display: flex;
     padding: 2px;
@@ -62,11 +70,7 @@
     gap: 1%;
     font-size: 1.1rem !important;
   }
-  .articleTitle {
-    font-size: 1.5rem;
-    height: 6vh;
-    width: 100%;
-  }
+ 
   .articleContent {
     width: 100%;
   }
