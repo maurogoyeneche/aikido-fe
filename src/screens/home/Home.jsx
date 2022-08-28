@@ -14,7 +14,7 @@ const Home = () => {
       <NavbarMenu />
       <Hero />
       <section className={styles.dojoSection}>
-        <h1 className="text-center">Dojos</h1>
+        <h1 className="text-center">Dojo</h1>
         <DojoList />
         <section className={styles.aboutAiki}>
           <AboutAiki />
