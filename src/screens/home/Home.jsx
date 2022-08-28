@@ -2,15 +2,30 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Hero from "../../components/Hero/Hero";
 import NavbarMenu from "../../components/NavbarMenu/NavbarMenu";
+import DojoList from "../../components/DojoList/DojoList";
+import ContactView from "../contact/ContactView";
+import AboutAiki from "../about/AboutAiki";
+import styles from "./Home.module.css";
 
 const Home = () => {
   return (
     <>
       <NavbarMenu />
       <Hero />
-      <section id="outlet">
-        <Outlet />
+      <section className={styles.dojoSection}>
+        <h1 className="text-center">Dojos</h1>
+        <DojoList />
+        <section className={styles.aboutAiki}>
+          <AboutAiki />
+        </section>
       </section>
+      <section className={styles.contactViewSection}>
+        <ContactView />
+      </section>
+
+      {/* <section id="outlet">
+        <Outlet />
+      </section> */}
     </>
   );
 };
