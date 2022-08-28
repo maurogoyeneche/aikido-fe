@@ -6,6 +6,7 @@ import DojoList from "../../components/DojoList/DojoList";
 import ContactView from "../contact/ContactView";
 import AboutAiki from "../about/AboutAiki";
 import styles from "./Home.module.css";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <section className={styles.contactViewSection}>
         <ContactView />
       </section>
+      <Footer />
 
       {/* <section id="outlet">
         <Outlet />
