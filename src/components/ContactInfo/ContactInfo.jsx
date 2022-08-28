@@ -24,7 +24,7 @@ const ContactInfo = () => {
             </dt>
             <dd>+598 91 461 534</dd>
           </dl>
-          <dl className="d-flex">
+          {/* <dl className="d-flex">
             <dt className="me-3">
               <Envelope />
             </dt>
@@ -33,7 +33,7 @@ const ContactInfo = () => {
                 marcosjsosa@gmail.com{" "}
               </a>
             </dd>
-          </dl>
+          </dl> */}
         </div>
         <Figure className="m-0">
           <Figure.Image
