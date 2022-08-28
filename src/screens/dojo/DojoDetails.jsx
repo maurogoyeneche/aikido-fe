@@ -37,8 +37,8 @@ const DojoDetails = ({ dojo }) => {
               <strong>Direccion: </strong>
             </h3>
             {address}
-            <h6 className="mt-3">
-              <strong>Telefono/s:</strong>
+            <h6 className="mt-3 mb-0">
+              <strong>Telefono:</strong>
             </h6>
             <p className="m-0 p-0">{phone}</p>
           </div>
