@@ -41,7 +41,7 @@ export const dojos = [
   },
   {
     name: "Uruguay Aiki Shurendojo",
-    branch_off: "Asociación Japonesa en el Uruguay (AJU)",
+    branch_off: "Asociación Japonesa en el Uruguay",
     days: ["Jueves"],
     hours: "21:30 a 22:30",
     address: "Pl. Vidiella 5632",
