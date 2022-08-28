@@ -42,7 +42,7 @@ const ContactView = () => {
           </Toast>
         </ToastContainer>
 
-        <h3 className={`bg-dark text-light p-2 m-0`}>Contacto</h3>
+        <h3 className={`bg-dark text-light p-3 m-0`}>Contacto</h3>
         <Row className="p-0 g-0 mt-3 d-flex">
           <Col sm={12} md={6} className={`pt-5 pb-5 ${styles.customCol}`}>
             <ContactForm setShow={setShow} setStatus={setStatus} />

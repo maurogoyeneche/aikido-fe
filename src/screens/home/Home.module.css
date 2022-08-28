@@ -1,0 +1,17 @@
+.contactViewSection {
+  padding: 1rem 0;
+  background-color: whitesmoke;
+}
+.aboutAiki {
+  color: whitesmoke;
+  padding: 1rem 0 4rem 0;
+}
+.dojoSection {
+  padding: 2rem 0;
+  color: whitesmoke;
+}
+@media (max-width: 980px) {
+  .aboutAiki p {
+    text-align: center;
+  }
+}

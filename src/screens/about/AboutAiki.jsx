@@ -6,18 +6,18 @@ const AboutAiki = () => {
     <Container>
       <div className="d-flex flex-column w-100 align-items-center">
         <article className=" col-md-6  w-100 mb-5 mt-5">
-          <h3 className="bg-dark text-light p-3 ">Filosofía</h3>
+          <h3 className="bg-light text-dark p-3 ">Filosofía</h3>
           <div className="row g-0 align-items-center">
             <div className="col-sm-6 col-md-3 text-center">
               <img className="" src="img/img-aiki-daijin.png" alt="" />
             </div>
             <div className="col-sm-6 col-md-9 ">
-              <p className="fs-4 text-start p-4 ">
+              <p className="fs-4 p-4 ">
                 Conservamos y compartimos la gran influencia de mi padre
                 Morihiro manteniéndonos fiel a la herencia técnica y a la
                 espiritualidad dejada por el Fundador Morihei Ueshiba.
               </p>
-              <p className="fs-4  text-start p-4 ">
+              <p className="fs-4  p-4 ">
                 Continuamente tratamos de mejorarnos a nosotros mismos a través
                 del intensivo y práctico sistemática de kihon. Creemos que cada
                 entrenamiento y cada sesión es una oportunidad única para
