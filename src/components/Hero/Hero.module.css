@@ -84,6 +84,7 @@
     background-position: center top;
     background-image: url("../../img/aikidoJefeMobile.jpg");
     justify-content: center;
+    background-size: cover;
   }
   .hero div h1 {
     font-size: 40px;
@@ -112,5 +113,7 @@
   }
   .hero {
     justify-content: center;
+    background-position: top right;
+    background-image: url("../../img/aikidoJefeMobile.jpg");
   }
 }

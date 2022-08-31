@@ -18,10 +18,10 @@ const Home = () => {
           Centros de entrenamiento
         </h1>
         <DojoList />
-        <section className={styles.aboutAiki}>
-          <h1 className="text-center bg-light text-dark p-3">Filosofía</h1>
-          <AboutAiki />
-        </section>
+      </section>
+      <section className={styles.aboutAiki}>
+        <h1 className="text-center bg-light text-dark p-3">Filosofía</h1>
+        <AboutAiki />
       </section>
       <section className={styles.contactViewSection}>
         <h1 className="text-center bg-dark text-light p-3">Contáctanos</h1>
