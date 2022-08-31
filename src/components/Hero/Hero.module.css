@@ -1,95 +1,116 @@
-.hero { 
+.hero {
   background-color: black;
-  background-image: url( '../../img/aikidoJefeBackground.jpg' );
+  background-image: url("../../img/aikidoJefeBackground.jpg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: auto 100%;
   height: 92.6vh;
   width: 100%;
-  display:flex;
+  display: flex;
   box-sizing: border-box;
-  justify-content:center;
-  align-items:center;
-  font-family: 'Montserrat';
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
   color: white;
 }
-.hero div{
+.hero div {
   width: 80%;
 }
-.hero div h1{
+.hero div h1 {
   font-size: 60px;
   font-weight: 800;
   width: 10ch;
-  line-height: .9;
+  line-height: 0.9;
 }
-.hero div h4{
+.hero div h4 {
   width: 18ch;
   font-weight: 400;
   font-size: 40px;
 }
-.hero div a{
+.hero div a {
   text-decoration: none;
-  background-color: #0000FE;
+  background-color: #0000fe;
   color: white;
   font-weight: 500;
   font-size: 24px;
   padding: 5px 16px 5px 16px;
   border: none;
+  transition: 0.2s;
 }
-.hero div a:hover{
-  background-color: rgba(255, 255, 255, 0.68);
-  color: #000000;
-  animation-delay: 1000ms;
+.hero div a:hover {
+  background-color: #0059ff;
+  filter: brightness(1.5);
 }
-.hero div h4 b{
-  color: #0000FE;
+.hero div h4 b {
+  color: #0000fe;
   font-weight: 500;
 }
+.partners {
+  margin-top: -10px;
+}
+.partners a {
+  background-color: unset !important;
+  transition: 0.3s;
+}
+.partners a:hover {
+  filter: brightness(1.3);
+}
 
-@media( max-width: 320px ){
-  .hero{
+@media (max-width: 320px) {
+  .hero {
     background-position: center top;
-    background-image: url( '../../img/aikidoJefeMobile.jpg' );
+    background-image: url("../../img/aikidoJefeMobile.jpg");
     justify-content: center;
   }
-  .hero div h1{
+  .hero div h1 {
     font-size: 30px;
     font-weight: 800;
     line-height: 38px;
     width: 100%;
   }
-  .hero div h4{
+  .hero div h4 {
     font-size: 20px;
+  }
+  .partners > span {
+    font-size: 0.9rem;
+  }
+  .partners > a > img {
+    width: 100px !important;
   }
 }
 
-@media ( min-width: 321px ) and (max-width: 600px) {
-  .hero{
+@media (min-width: 321px) and (max-width: 600px) {
+  .hero {
     background-position: center top;
-    background-image: url( '../../img/aikidoJefeMobile.jpg' );
+    background-image: url("../../img/aikidoJefeMobile.jpg");
     justify-content: center;
   }
-  .hero div h1{
+  .hero div h1 {
     font-size: 40px;
     font-weight: 800;
     line-height: 38px;
   }
-  .hero div h4{
+  .hero div h4 {
     width: 20ch;
     font-weight: 400;
     font-size: 22px;
     margin-top: 12px;
   }
-  .hero div a{
+  .hero div a {
     font-size: 20px;
   }
+  .partners > a {
+    width: 100% !important;
+  }
+  .partners > span {
+    font-size: 0.9rem;
+  }
 }
-@media ( min-width: 1400px){
-  .hero div h1{
+@media (min-width: 1400px) {
+  .hero div h1 {
     font-size: 80px;
   }
-  .hero{
+  .hero {
     justify-content: center;
   }
-} 
-
+}
