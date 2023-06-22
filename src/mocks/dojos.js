@@ -30,7 +30,7 @@ export const dojos = [
     name: "Uruguay Aiki Shurendojo",
     branch_off: "Yamato Dojo",
     days: ["Martes", "Jueves"],
-    hours: "20:30 a 22:00",
+    hours: "19:00 a 20:30",
     address: "Pasaje Claudio Garcia 970",
     gmap_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1636.6560494631021!2d-56.20606558255615!3d-34.873508399999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f7f40ad052e79%3A0x2c174a8eccfb931a!2sYamato%20Dojo%20-%20Uruguay%20Budokan!5e0!3m2!1ses-419!2suy!4v1654910671050!5m2!1ses-419!2suy",
