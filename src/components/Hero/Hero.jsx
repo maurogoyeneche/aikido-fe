@@ -19,6 +19,19 @@ function Hero() {
           <Link to="contact" onClick={handleScroll}>
             CONTACTANOS
           </Link>
+          <div className="mb-3 position-absolute bottom-0 d-flex flex-column">
+            <span>MEMBRESIA</span>
+
+            <div className={`${styles.partners}`}>
+              <a href="https://paselibre.uy/" className="p-0 m-0">
+                <img
+                  src="/img/paselibreLogo.svg"
+                  width="120px"
+                  alt="pase libre"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </>
