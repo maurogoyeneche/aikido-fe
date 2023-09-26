@@ -43,11 +43,11 @@ export const dojos = [
     name: "Uruguay Aiki Shurendojo",
     branch_off: "Asociación Japonesa en el Uruguay",
     days: ["Jueves"],
-    hours: "21:30 a 22:30",
+    hours: "19:30 a 21:30",
     address: "Pl. Vidiella 5632",
     gmap_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.013513280879!2d-56.223802148704756!3d-34.805601880311606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a1d4a3733e13c1%3A0x9d8775041b01dce0!2sASOCIACI%C3%93N%20JAPONESA%20DEL%20URUGUAY%20(AJU)!5e0!3m2!1ses-419!2suy!4v1654911068020!5m2!1ses-419!2suy",
-    phone: "099290942",
+    phone: "097212971",
     phone_other: "",
     sensei: ["Walter Moyano"],
     image: "../../img/logo_iwama_ryu.png",
