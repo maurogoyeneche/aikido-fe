@@ -41,6 +41,7 @@ const ContactForm = ({ setShow, setStatus }) => {
     } catch (error) {
       setStatus("danger");
       setShow(true);
+      setLoading(false);
       throw error;
     }
   };
