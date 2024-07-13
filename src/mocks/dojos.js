@@ -1,6 +1,6 @@
 export const dojos = [
   {
-    name: "Shin Dojo Uruguay",
+    name: "Shin Dojo",
     branch_off: "Federación Ancap - FANCAP",
     days: ["Martes", "Jueves"],
     hours: "10:00 a 11:30 & 19:00 a 20:30",
