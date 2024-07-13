@@ -1,12 +1,12 @@
 export const dojos = [
   {
-    name: "Uruguay Aiki Shurendojo",
-    branch_off: "Complejo Bvd. Artigas",
-    days: ["Lunes", "Miércoles"],
-    hours: "20:30 a 21:45",
-    address: "Bv. Gral. Artigas 2498",
+    name: "Shin Dojo Uruguay",
+    branch_off: "Federación Ancap - FANCAP",
+    days: ["Martes", "Jueves"],
+    hours: "10:00 a 11:30 & 19:00 a 20:30",
+    address: "Av. Agraciada 2522",
     gmap_src:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6546.087546741105!2d-56.17493473022461!3d-34.8802471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81ed99a34f65%3A0x13c5cbe9a41961d!2sAikido%20Dentou%20Iwama%20Ryu%20Montevideo!5e0!3m2!1ses-419!2suy!4v1654910342296!5m2!1ses-419!2suy",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1714.7620617917712!2d-56.19423922383902!3d-34.886810506683744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80181d83fc97%3A0x193b5148a6a0b1cc!2sFANCAP!5e0!3m2!1ses-419!2suy!4v1654911323603!5m2!1ses-419!2suy",
     phone: "091461534",
     phone_other: "",
     sensei: ["Marcos Sosa"],
@@ -25,7 +25,6 @@ export const dojos = [
     sensei: ["Aldo Villagra", "Marcello Scarpa"],
     image: "../../img/logo_iwama_ryu.png",
   },
-
   {
     name: "Uruguay Aiki Shurendojo",
     branch_off: "Yamato Dojo",
@@ -50,19 +49,6 @@ export const dojos = [
     phone: "097212971",
     phone_other: "",
     sensei: ["Walter Moyano"],
-    image: "../../img/logo_iwama_ryu.png",
-  },
-  {
-    name: "Uruguay Aiki Shurendojo",
-    branch_off: "Federación Ancap - FANCAP",
-    days: ["Martes", "Jueves"],
-    hours: "15:30 a 16:45",
-    address: "Av. Agraciada 2522",
-    gmap_src:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1714.7620617917712!2d-56.19423922383902!3d-34.886810506683744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80181d83fc97%3A0x193b5148a6a0b1cc!2sFANCAP!5e0!3m2!1ses-419!2suy!4v1654911323603!5m2!1ses-419!2suy",
-    phone: "091461534",
-    phone_other: "",
-    sensei: ["Marcos Sosa"],
     image: "../../img/logo_iwama_ryu.png",
   },
   {

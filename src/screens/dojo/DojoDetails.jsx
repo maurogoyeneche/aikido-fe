@@ -47,7 +47,7 @@ const DojoDetails = ({ dojo }) => {
               <strong>Dias y Horarios: </strong>{" "}
             </h6>
             {days.map((day, index) => (
-              <span>{index == 0 ? `${day} y ` : `${day} `}</span>
+              <span>{index === 0 ? `${day} y ` : `${day} `}</span>
             ))}
             de {hours}
           </div>
@@ -56,7 +56,7 @@ const DojoDetails = ({ dojo }) => {
               <strong>Representante</strong>
             </h3>
             {sensei.map((sensei, index) => (
-              <span> {index == 0 ? sensei : ` & ${sensei}`}</span>
+              <span> {index === 0 ? sensei : ` & ${sensei}`}</span>
             ))}
             {/* <h6 className="m-0 mt-3">
               <strong>E-mail:</strong>
