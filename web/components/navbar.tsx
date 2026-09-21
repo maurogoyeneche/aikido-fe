@@ -31,8 +31,12 @@ export default function Navbar() {
           {links.map((link) => (
             <NavigationMenuItem key={link.href}>
               <NavigationMenuLink
-                href={link.href}
-                className="rounded-md px-3 py-2 text-sm font-bold text-white hover:bg-white/10"
+                render={
+                  <Link
+                    href={link.href}
+                    className="rounded-md px-3 py-2 text-sm font-bold text-white hover:bg-white/10"
+                  />
+                }
               >
                 {link.label}
               </NavigationMenuLink>
