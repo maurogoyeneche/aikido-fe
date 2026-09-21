@@ -1,18 +1,15 @@
 import React from "react";
 import styles from "./DojoDetails.module.css";
-import { Container, Image } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const DojoDetails = ({ dojo }) => {
   const {
-    name,
     branch_off,
     days,
-    image,
     hours,
     address,
     gmap_src,
     phone,
-    phone_other,
     sensei,
   } = dojo;
 
@@ -22,6 +19,7 @@ const DojoDetails = ({ dojo }) => {
       <article className={styles.articleCard}>
         <div className={styles.articleContent}>
           <iframe
+            title={`Mapa - ${branch_off}`}
             src={gmap_src}
             width="100%"
             height="100%"

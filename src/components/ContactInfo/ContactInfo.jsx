@@ -2,7 +2,7 @@ import React from "react";
 import { Figure } from "react-bootstrap";
 import styles from "./ContactInfo.module.css";
 // import * as Icon from "react-bootstrap-icons";
-import { GeoAlt, TelephoneFill, Envelope } from "react-bootstrap-icons";
+import { GeoAlt, TelephoneFill } from "react-bootstrap-icons";
 
 const ContactInfo = () => {
   return (
