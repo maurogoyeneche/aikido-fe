@@ -49,7 +49,7 @@ lib/
 | Actual | Nuevo | Notas |
 |---|---|---|
 | `Hero` | `components/hero.tsx` (Tailwind custom) | Arte de marca; layout validado en mockup previo |
-| `NavbarMenu` | `components/navbar.tsx` (shadcn `NavigationMenu` + estilo custom) | |
+| `NavbarMenu` | `components/navbar.tsx` (shadcn `NavigationMenu` + estilo custom) | **Debe conservar el logo actual `/img/iwamashinshinlogo-2.png` (PNG) como `next/image` en el brand slot — no reemplazar por texto ni por un ícono** |
 | `AboutAiki` | `components/about-aiki.tsx` (Tailwind custom) | |
 | `DojoList` + `DojoDetails` | `components/dojo-list.tsx` (Swiper) + `components/dojo-card.tsx` (shadcn `Card`) | |
 | `ContactForm` | `components/contact-form.tsx` (shadcn `Input`/`Textarea`/`Button` + Formik/Yup) | Turnstile + honeypot portados literal |
