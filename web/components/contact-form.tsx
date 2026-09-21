@@ -30,19 +30,26 @@ const initialValues: ContactValues = {
 const validationSchema = Yup.object({
   name: Yup.string()
     .required("Ingrese un nombre")
+    .trim("No incluyas espacios en blanco al principio ni al final")
+    .strict(true)
     .matches(/^(?!\s*$)[A-Za-zÀ-ÖØ-öø-ÿ\s]*$/, "Ingrese solo letras")
     .max(50, "Máximo 50 caracteres")
     .min(3, "Mínimo 3 caracteres"),
   email: Yup.string()
     .required("Ingrese un e-mail")
     .email("Ingrese un e-mail válido")
-    .max(128, "Máximo 128 caracteres"),
-  phone: Yup.string().matches(
-    /^(?!\s*$)[0-9*#\-+()\s]*$/,
-    "Ingrese un número válido"
-  ),
+    .max(128, "Máximo 128 caracteres")
+    .matches(
+      /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+      "Ingrese un e-mail válido"
+    ),
+  phone: Yup.string()
+    .matches(/^(?!\s*$)[0-9*#\-+()\s]*$/, "Ingrese un número válido")
+    .max(32, "Debe tener un máximo 32 caracteres"),
   message: Yup.string()
     .required("Ingrese un mensaje")
+    .trim("No incluyas espacios en blanco al principio ni al final")
+    .strict(true)
     .matches(
       /^(?!\s*$)[A-Za-zÀ-ÖØ-öø-ÿ0.,\s]*$/,
       "Ingrese un mensaje válido, sin caracteres especiales"
