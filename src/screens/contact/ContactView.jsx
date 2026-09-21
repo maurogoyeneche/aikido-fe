@@ -12,6 +12,7 @@ import { CheckCircle, XCircle } from "react-bootstrap-icons";
 const ContactView = () => {
   const [show, setShow] = useState(false);
   const [status, setStatus] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <>
@@ -35,7 +36,9 @@ const ContactView = () => {
               ) : (
                 <>
                   <XCircle size={30} className="mr-2" />
-                  <span className="ms-4">Algo salió mal. </span>
+                  <span className="ms-4">
+                    {message || "Algo salió mal. Intentá nuevamente."}
+                  </span>
                 </>
               )}
             </Toast.Body>
@@ -47,7 +50,11 @@ const ContactView = () => {
         </h3> */}
         <Row className="p-0 g-0 mt-3 d-flex">
           <Col sm={12} md={6} className={`pt-5 pb-5 ${styles.customCol}`}>
-            <ContactForm setShow={setShow} setStatus={setStatus} />
+            <ContactForm
+              setShow={setShow}
+              setStatus={setStatus}
+              setMessage={setMessage}
+            />
           </Col>
           <Col sm={12} md={6} className={`pt-5 pb-5 ${styles.customCol2}`}>
             <ContactInfo />

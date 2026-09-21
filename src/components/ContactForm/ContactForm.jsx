@@ -50,7 +50,7 @@ const MyTextAreaInput = ({ label, field, ...props }) => {
   );
 };
 
-const ContactForm = ({ setShow, setStatus }) => {
+const ContactForm = ({ setShow, setStatus, setMessage }) => {
   const [loading, setLoading] = useState(false);
   const [captchaToken, setCaptchaToken] = useState("");
   const [captchaError, setCaptchaError] = useState("");
@@ -104,9 +104,11 @@ const ContactForm = ({ setShow, setStatus }) => {
         data: { ...values, captchaToken },
       });
       setStatus("success");
+      setMessage("");
       setShow(true);
     } catch (error) {
       setStatus("danger");
+      setMessage(error.response?.data?.message || "");
       setShow(true);
       throw error;
     } finally {
@@ -124,6 +126,7 @@ const ContactForm = ({ setShow, setStatus }) => {
     } else {
       setShow(true);
       setStatus("danger");
+      setMessage("");
 
       throw error;
     }
