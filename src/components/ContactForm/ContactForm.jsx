@@ -1,9 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./ContactForm.module.css";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import { Button, Form as BootstrapForm, Spinner } from "react-bootstrap";
 import axios from "axios";
+
+const TURNSTILE_SITE_KEY = "0x4AAAAAAE-VIrYvNB8Er7Ov";
+const TURNSTILE_SCRIPT_SRC =
+  "https://challenges.cloudflare.com/turnstile/v0/api.js";
+
+const loadTurnstileScript = () =>
+  new Promise((resolve, reject) => {
+    if (window.turnstile) {
+      resolve(window.turnstile);
+      return;
+    }
+    const existing = document.querySelector(
+      `script[src="${TURNSTILE_SCRIPT_SRC}"]`
+    );
+    if (existing) {
+      existing.addEventListener("load", () => resolve(window.turnstile));
+      existing.addEventListener("error", reject);
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = TURNSTILE_SCRIPT_SRC;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => resolve(window.turnstile);
+    script.onerror = reject;
+    document.body.appendChild(script);
+  });
 
 //TODO: modularizar a custom UI
 const MyInput = ({ label, field, ...props }) => {
@@ -25,8 +52,48 @@ const MyTextAreaInput = ({ label, field, ...props }) => {
 
 const ContactForm = ({ setShow, setStatus }) => {
   const [loading, setLoading] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState("");
+  const [captchaError, setCaptchaError] = useState("");
+  const turnstileRef = useRef(null);
+  const widgetIdRef = useRef(null);
 
   const error = new Error({ message: "Get out of here!" });
+
+  const renderTurnstile = useCallback((turnstile) => {
+    if (!turnstileRef.current || widgetIdRef.current !== null) return;
+    widgetIdRef.current = turnstile.render(turnstileRef.current, {
+      sitekey: TURNSTILE_SITE_KEY,
+      callback: (token) => {
+        setCaptchaToken(token);
+        setCaptchaError("");
+      },
+      "expired-callback": () => setCaptchaToken(""),
+      "error-callback": () => setCaptchaToken(""),
+    });
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    loadTurnstileScript()
+      .then((turnstile) => {
+        if (!cancelled) renderTurnstile(turnstile);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+      if (window.turnstile && widgetIdRef.current !== null) {
+        window.turnstile.remove(widgetIdRef.current);
+        widgetIdRef.current = null;
+      }
+    };
+  }, [renderTurnstile]);
+
+  const resetCaptcha = () => {
+    if (window.turnstile && widgetIdRef.current !== null) {
+      window.turnstile.reset(widgetIdRef.current);
+    }
+    setCaptchaToken("");
+  };
 
   const sendMail = async (values) => {
     try {
@@ -34,21 +101,26 @@ const ContactForm = ({ setShow, setStatus }) => {
       await axios({
         method: "post",
         url: "https://aikido-be.vercel.app/send-mail",
-        data: { ...values },
+        data: { ...values, captchaToken },
       });
       setStatus("success");
       setShow(true);
     } catch (error) {
       setStatus("danger");
       setShow(true);
-      setLoading(false);
       throw error;
+    } finally {
+      setLoading(false);
+      resetCaptcha();
     }
   };
   const handleSubmit = async (values) => {
+    if (!captchaToken) {
+      setCaptchaError("Esperá a que se complete la verificación anti-bot");
+      return;
+    }
     if (values.surname === "") {
       await sendMail(values);
-      setLoading(false);
     } else {
       setShow(true);
       setStatus("danger");
@@ -121,8 +193,10 @@ const ContactForm = ({ setShow, setStatus }) => {
               value={values.surname}
               component={MyInput}
               placeholder="do not complete if you are a human"
-              style={{ margin: 0, padding: 0, gap: 0 }}
-              hidden
+              autoComplete="off"
+              tabIndex={-1}
+              aria-hidden="true"
+              className={styles.honeypot}
             />
             <Field
               type="text"
@@ -173,6 +247,11 @@ const ContactForm = ({ setShow, setStatus }) => {
             >
               {touched.message && errors.message}
             </span>
+
+            <div ref={turnstileRef} className="mb-2" />
+            {captchaError && (
+              <span className="text-danger p-1 d-block">{captchaError}</span>
+            )}
 
             <Button
               id={styles.submit}

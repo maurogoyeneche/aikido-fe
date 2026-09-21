@@ -8,6 +8,14 @@
   border: 0;
   box-shadow: 2px 2px 7px 0.5px rgba(0, 0, 0, 0.25);
 }
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 .submit {
   width: 40%;
   padding: .6rem .5rem;
