@@ -149,32 +149,32 @@ export default function ContactForm() {
             />
 
             <div>
-              <label className="mb-1 block text-sm font-medium">Nombre</label>
-              <Field as={Input} name="name" placeholder="Ingrese su nombre..." />
+              <label htmlFor="contact-name" className="mb-1 block text-sm font-medium">Nombre</label>
+              <Field as={Input} id="contact-name" name="name" placeholder="Ingrese su nombre..." />
               {touched.name && errors.name && (
                 <span className="text-sm text-destructive">{errors.name}</span>
               )}
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-medium">E-mail</label>
-              <Field as={Input} type="email" name="email" placeholder="Ingrese su E-mail..." />
+              <label htmlFor="contact-email" className="mb-1 block text-sm font-medium">E-mail</label>
+              <Field as={Input} id="contact-email" type="email" name="email" placeholder="Ingrese su E-mail..." />
               {touched.email && errors.email && (
                 <span className="text-sm text-destructive">{errors.email}</span>
               )}
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-medium">Teléfono</label>
-              <Field as={Input} name="phone" placeholder="Ingrese su teléfono..." />
+              <label htmlFor="contact-phone" className="mb-1 block text-sm font-medium">Teléfono</label>
+              <Field as={Input} id="contact-phone" name="phone" placeholder="Ingrese su teléfono..." />
               {touched.phone && errors.phone && (
                 <span className="text-sm text-destructive">{errors.phone}</span>
               )}
             </div>
 
             <div>
-              <label className="mb-1 block text-sm font-medium">Mensaje</label>
-              <Field as={Textarea} name="message" rows={4} placeholder="Ingrese un mensaje..." />
+              <label htmlFor="contact-message" className="mb-1 block text-sm font-medium">Mensaje</label>
+              <Field as={Textarea} id="contact-message" name="message" rows={4} placeholder="Ingrese un mensaje..." />
               {touched.message && errors.message && (
                 <span className="text-sm text-destructive">{errors.message}</span>
               )}

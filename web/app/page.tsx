@@ -20,8 +20,8 @@ export default function HomePage() {
         </h1>
         <AboutAiki />
       </section>
-      <section className="bg-black py-16">
-        <h1 className="mb-8 p-3 text-center text-white">Contáctanos</h1>
+      <section className="bg-[whitesmoke] py-16">
+        <h1 className="mb-8 p-3 text-center text-black">Contáctanos</h1>
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 sm:grid-cols-2">
           <ContactForm />
           <ContactInfo />

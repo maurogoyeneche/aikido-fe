@@ -5,11 +5,18 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[92vh] w-full items-center overflow-hidden bg-black text-white">
       <Image
+        src="/img/aikidoJefeMobile.jpg"
+        alt=""
+        fill
+        priority
+        className="object-cover object-top opacity-60 sm:hidden"
+      />
+      <Image
         src="/img/aikidoJefeBackground.jpg"
         alt=""
         fill
         priority
-        className="object-cover object-[top_right] opacity-60"
+        className="hidden object-cover object-[top_right] opacity-60 sm:block"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
 
