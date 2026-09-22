@@ -41,15 +41,28 @@ export default function AboutAiki() {
             1942 — hoy
           </span>
         </div>
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-[1fr_220px]">
-          <Lineage />
-          <Image
-            src="/img/aikido-tecnica.jpg"
-            alt="Práctica de técnica en el dojo"
-            width={750}
-            height={1334}
-            className="h-full w-full rounded-none object-cover"
-          />
+        <Lineage />
+
+        <div className="mt-10 grid grid-cols-1 gap-8 border-t border-black/10 pt-10 sm:grid-cols-[220px_1fr] sm:items-center">
+          <div className="relative aspect-[3/4] w-full max-w-[220px] sm:max-w-none">
+            <Image
+              src="/img/aikido-tecnica.jpg"
+              alt="Mario Silva Sensei aplicando una técnica en el dojo"
+              fill
+              className="h-full w-full rounded-none object-cover object-top"
+            />
+          </div>
+          <div>
+            <span className="mb-2 block text-sm text-neutral-500">
+              Representante en Uruguay
+            </span>
+            <h4 className="font-heading text-xl font-bold text-black">
+              Mario Silva Sensei
+            </h4>
+            <p className="mt-1 text-sm text-neutral-600">
+              6to Dan — Representante de ISSASK LATAM en Uruguay
+            </p>
+          </div>
         </div>
       </article>
 
