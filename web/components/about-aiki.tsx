@@ -25,7 +25,7 @@ export default function AboutAiki() {
             este entrenamiento constante.
           </p>
           <p className="text-right text-lg">
-            Hitohira Saito
+            <span className="font-heading font-medium">Hitohira Saito</span>
             <span className="block text-sm">
               Iwama Shinshin Aiki Shurenkai.
             </span>
@@ -34,7 +34,7 @@ export default function AboutAiki() {
       </article>
 
       <article className="w-full">
-        <h3 className="bg-black p-3 text-white">
+        <h3 className="font-heading bg-black p-3 text-white">
           Más sobre Iwama ShinShin Aikishurenkai
         </h3>
         <iframe

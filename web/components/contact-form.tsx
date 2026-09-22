@@ -126,7 +126,7 @@ export default function ContactForm() {
 
   return (
     <div className="px-3">
-      <h5 className="mb-4 bg-black p-2 pl-3 font-bold text-white">
+      <h5 className="font-heading mb-4 bg-black p-2 pl-3 font-bold text-white">
         Envíanos tu consulta
       </h5>
       <Formik

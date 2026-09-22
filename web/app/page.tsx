@@ -11,7 +11,7 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-[1280px] px-6 py-20 lg:px-10">
         <div className="mb-12 border-t-2 border-[#0000fe] pt-4">
-          <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-black sm:text-4xl">
             Centros de entrenamiento
           </h2>
         </div>
@@ -20,7 +20,7 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-[1280px] px-6 py-20 lg:px-10">
         <div className="mb-12 border-t-2 border-[#0000fe] pt-4">
-          <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-black sm:text-4xl">
             Filosofía
           </h2>
         </div>
@@ -30,7 +30,7 @@ export default function HomePage() {
       <section className="bg-[whitesmoke] py-20">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
           <div className="mb-12 border-t-2 border-[#0000fe] pt-4">
-            <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-black sm:text-4xl">
               Contáctanos
             </h2>
           </div>

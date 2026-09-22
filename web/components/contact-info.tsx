@@ -5,7 +5,7 @@ export default function ContactInfo() {
   return (
     <div className="flex h-full flex-col justify-between gap-8 px-3">
       <div className="w-full">
-        <h5 className="mb-5 bg-black p-2 pl-3 font-bold text-white">
+        <h5 className="font-heading mb-5 bg-black p-2 pl-3 font-bold text-white">
           Información de contacto
         </h5>
         <dl className="flex items-center gap-3">

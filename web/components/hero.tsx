@@ -22,7 +22,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 sm:px-10 lg:px-10">
         <div className="flex flex-col gap-6">
-          <h1 className="max-w-[11ch] text-5xl font-extrabold leading-[0.95] sm:text-6xl lg:text-7xl">
+          <h1 className="font-heading max-w-[11ch] text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">
             Aikido Tradicional
           </h1>
           <h4 className="max-w-[26ch] text-xl font-normal text-neutral-300 sm:text-2xl">
