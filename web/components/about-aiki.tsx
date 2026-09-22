@@ -34,20 +34,23 @@ export default function AboutAiki() {
         </div>
       </article>
 
-      <article className="mb-12 grid w-full grid-cols-1 gap-8 sm:grid-cols-[1fr_220px]">
-        <div>
-          <h4 className="font-heading mb-6 text-sm font-medium tracking-tight text-neutral-500">
-            Linaje
-          </h4>
-          <Lineage />
+      <article className="mb-12 w-full">
+        <div className="mb-8 flex items-end justify-between gap-4 border-t-2 border-[#0000fe] pt-4">
+          <h3 className="font-heading text-2xl font-bold text-black">Linaje</h3>
+          <span className="hidden text-sm text-neutral-500 sm:block">
+            1942 — hoy
+          </span>
         </div>
-        <Image
-          src="/img/aikido-tecnica.jpg"
-          alt="Práctica de técnica en el dojo"
-          width={750}
-          height={1334}
-          className="h-full w-full rounded-none object-cover"
-        />
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-[1fr_220px]">
+          <Lineage />
+          <Image
+            src="/img/aikido-tecnica.jpg"
+            alt="Práctica de técnica en el dojo"
+            width={750}
+            height={1334}
+            className="h-full w-full rounded-none object-cover"
+          />
+        </div>
       </article>
 
       <article className="w-full">

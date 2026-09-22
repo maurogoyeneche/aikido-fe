@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Hero from "@/components/hero";
-import DojoList from "@/components/dojo-list";
+import DojoDirectory from "@/components/dojo-directory";
 import AboutAiki from "@/components/about-aiki";
 import ContactForm from "@/components/contact-form";
 import ContactInfo from "@/components/contact-info";
@@ -24,7 +24,7 @@ export default function HomePage() {
           height={1113}
           className="mb-12 h-auto w-full object-cover"
         />
-        <DojoList />
+        <DojoDirectory />
       </section>
 
       <section className="bg-black py-20">

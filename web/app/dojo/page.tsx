@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import DojoList from "@/components/dojo-list";
+import DojoDirectory from "@/components/dojo-directory";
 
 export const metadata: Metadata = {
   title: "Dojos | Iwama Shinshin Aiki Shuren Kai",
@@ -18,7 +18,7 @@ export default function DojoPage() {
         height={1113}
         className="mb-12 h-auto w-full object-cover"
       />
-      <DojoList />
+      <DojoDirectory />
     </main>
   );
 }

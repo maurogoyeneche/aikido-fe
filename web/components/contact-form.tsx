@@ -149,7 +149,7 @@ export default function ContactForm() {
             />
 
             <div>
-              <label htmlFor="contact-name" className="mb-1 block text-sm font-medium">Nombre</label>
+              <label htmlFor="contact-name" className="mb-1.5 block text-sm font-medium">Nombre</label>
               <Field
                 as={Input}
                 id="contact-name"
@@ -157,6 +157,7 @@ export default function ContactForm() {
                 placeholder="Ingrese su nombre..."
                 aria-describedby={touched.name && errors.name ? "contact-name-error" : undefined}
                 aria-invalid={Boolean(touched.name && errors.name)}
+                className="h-11 rounded-none border-black/20 px-3 focus-visible:border-[#0000fe] focus-visible:ring-[#0000fe]/20"
               />
               {touched.name && errors.name && (
                 <span id="contact-name-error" role="alert" className="text-sm text-destructive">
@@ -166,7 +167,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label htmlFor="contact-email" className="mb-1 block text-sm font-medium">E-mail</label>
+              <label htmlFor="contact-email" className="mb-1.5 block text-sm font-medium">E-mail</label>
               <Field
                 as={Input}
                 id="contact-email"
@@ -175,6 +176,7 @@ export default function ContactForm() {
                 placeholder="Ingrese su E-mail..."
                 aria-describedby={touched.email && errors.email ? "contact-email-error" : undefined}
                 aria-invalid={Boolean(touched.email && errors.email)}
+                className="h-11 rounded-none border-black/20 px-3 focus-visible:border-[#0000fe] focus-visible:ring-[#0000fe]/20"
               />
               {touched.email && errors.email && (
                 <span id="contact-email-error" role="alert" className="text-sm text-destructive">
@@ -184,7 +186,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label htmlFor="contact-phone" className="mb-1 block text-sm font-medium">Teléfono</label>
+              <label htmlFor="contact-phone" className="mb-1.5 block text-sm font-medium">Teléfono</label>
               <Field
                 as={Input}
                 id="contact-phone"
@@ -192,6 +194,7 @@ export default function ContactForm() {
                 placeholder="Ingrese su teléfono..."
                 aria-describedby={touched.phone && errors.phone ? "contact-phone-error" : undefined}
                 aria-invalid={Boolean(touched.phone && errors.phone)}
+                className="h-11 rounded-none border-black/20 px-3 focus-visible:border-[#0000fe] focus-visible:ring-[#0000fe]/20"
               />
               {touched.phone && errors.phone && (
                 <span id="contact-phone-error" role="alert" className="text-sm text-destructive">
@@ -201,7 +204,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label htmlFor="contact-message" className="mb-1 block text-sm font-medium">Mensaje</label>
+              <label htmlFor="contact-message" className="mb-1.5 block text-sm font-medium">Mensaje</label>
               <Field
                 as={Textarea}
                 id="contact-message"
@@ -210,6 +213,7 @@ export default function ContactForm() {
                 placeholder="Ingrese un mensaje..."
                 aria-describedby={touched.message && errors.message ? "contact-message-error" : undefined}
                 aria-invalid={Boolean(touched.message && errors.message)}
+                className="rounded-none border-black/20 px-3 py-2.5 focus-visible:border-[#0000fe] focus-visible:ring-[#0000fe]/20"
               />
               {touched.message && errors.message && (
                 <span id="contact-message-error" role="alert" className="text-sm text-destructive">
@@ -220,7 +224,11 @@ export default function ContactForm() {
 
             <div ref={turnstileRef} />
 
-            <Button type="submit" disabled={loading} className="w-full sm:w-auto">
+            <Button
+              type="submit"
+              disabled={loading}
+              className="h-11 w-full rounded-none bg-[#0000fe] px-6 font-medium hover:bg-[#0000fe]/90 sm:w-auto"
+            >
               {loading ? "Enviando..." : "Enviar"}
             </Button>
           </Form>
