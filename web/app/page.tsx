@@ -34,9 +34,11 @@ export default function HomePage() {
               Contáctanos
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-0">
             <ContactForm />
-            <ContactInfo />
+            <div className="sm:border-l sm:border-black/10 sm:pl-10">
+              <ContactInfo />
+            </div>
           </div>
         </div>
       </section>

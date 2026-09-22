@@ -17,7 +17,7 @@ export default function DojoList() {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      className="pb-10"
+      className="pb-10 [--swiper-navigation-color:#0000fe] [--swiper-navigation-size:20px] [--swiper-pagination-color:#0000fe] [--swiper-pagination-bullet-inactive-color:#d4d4d4] [--swiper-pagination-bullet-inactive-opacity:1]"
     >
       {dojos.map((dojo) => (
         <SwiperSlide key={`${dojo.name}-${dojo.branch_off}`}>

@@ -150,33 +150,71 @@ export default function ContactForm() {
 
             <div>
               <label htmlFor="contact-name" className="mb-1 block text-sm font-medium">Nombre</label>
-              <Field as={Input} id="contact-name" name="name" placeholder="Ingrese su nombre..." />
+              <Field
+                as={Input}
+                id="contact-name"
+                name="name"
+                placeholder="Ingrese su nombre..."
+                aria-describedby={touched.name && errors.name ? "contact-name-error" : undefined}
+                aria-invalid={Boolean(touched.name && errors.name)}
+              />
               {touched.name && errors.name && (
-                <span className="text-sm text-destructive">{errors.name}</span>
+                <span id="contact-name-error" role="alert" className="text-sm text-destructive">
+                  {errors.name}
+                </span>
               )}
             </div>
 
             <div>
               <label htmlFor="contact-email" className="mb-1 block text-sm font-medium">E-mail</label>
-              <Field as={Input} id="contact-email" type="email" name="email" placeholder="Ingrese su E-mail..." />
+              <Field
+                as={Input}
+                id="contact-email"
+                type="email"
+                name="email"
+                placeholder="Ingrese su E-mail..."
+                aria-describedby={touched.email && errors.email ? "contact-email-error" : undefined}
+                aria-invalid={Boolean(touched.email && errors.email)}
+              />
               {touched.email && errors.email && (
-                <span className="text-sm text-destructive">{errors.email}</span>
+                <span id="contact-email-error" role="alert" className="text-sm text-destructive">
+                  {errors.email}
+                </span>
               )}
             </div>
 
             <div>
               <label htmlFor="contact-phone" className="mb-1 block text-sm font-medium">Teléfono</label>
-              <Field as={Input} id="contact-phone" name="phone" placeholder="Ingrese su teléfono..." />
+              <Field
+                as={Input}
+                id="contact-phone"
+                name="phone"
+                placeholder="Ingrese su teléfono..."
+                aria-describedby={touched.phone && errors.phone ? "contact-phone-error" : undefined}
+                aria-invalid={Boolean(touched.phone && errors.phone)}
+              />
               {touched.phone && errors.phone && (
-                <span className="text-sm text-destructive">{errors.phone}</span>
+                <span id="contact-phone-error" role="alert" className="text-sm text-destructive">
+                  {errors.phone}
+                </span>
               )}
             </div>
 
             <div>
               <label htmlFor="contact-message" className="mb-1 block text-sm font-medium">Mensaje</label>
-              <Field as={Textarea} id="contact-message" name="message" rows={4} placeholder="Ingrese un mensaje..." />
+              <Field
+                as={Textarea}
+                id="contact-message"
+                name="message"
+                rows={4}
+                placeholder="Ingrese un mensaje..."
+                aria-describedby={touched.message && errors.message ? "contact-message-error" : undefined}
+                aria-invalid={Boolean(touched.message && errors.message)}
+              />
               {touched.message && errors.message && (
-                <span className="text-sm text-destructive">{errors.message}</span>
+                <span id="contact-message-error" role="alert" className="text-sm text-destructive">
+                  {errors.message}
+                </span>
               )}
             </div>
 

@@ -3,9 +3,11 @@ import ContactInfo from "@/components/contact-info";
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto grid max-w-[1280px] grid-cols-1 gap-8 px-6 py-16 sm:grid-cols-2 lg:px-10">
+    <main className="mx-auto grid max-w-[1280px] grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-0 lg:px-10">
       <ContactForm />
-      <ContactInfo />
+      <div className="sm:border-l sm:border-black/10 sm:pl-10">
+        <ContactInfo />
+      </div>
     </main>
   );
 }

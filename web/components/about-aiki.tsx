@@ -24,12 +24,12 @@ export default function AboutAiki() {
             más cerca del Fundador. Yo soy el primero en aplicar día a día,
             este entrenamiento constante.
           </p>
-          <p className="text-right text-lg">
-            <span className="font-heading font-medium">Hitohira Saito</span>
-            <span className="block text-sm">
-              Iwama Shinshin Aiki Shurenkai.
+          <blockquote className="border-l-2 border-[#0000fe] py-1 pl-6">
+            <cite className="font-heading not-italic font-medium">Hitohira Saito</cite>
+            <span className="block text-sm text-neutral-500">
+              Iwama Shinshin Aiki Shurenkai
             </span>
-          </p>
+          </blockquote>
         </div>
       </article>
 
