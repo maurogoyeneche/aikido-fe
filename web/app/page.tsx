@@ -33,6 +33,9 @@ export default function HomePage() {
             <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Entrenamiento
             </h2>
+            <p className="mt-3 max-w-2xl text-neutral-400">
+              Práctica de armas y técnica a mano vacía en nuestros dojos.
+            </p>
           </div>
           <Gallery />
         </div>
