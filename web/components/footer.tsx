@@ -37,8 +37,15 @@ export default function Footer() {
           </nav>
 
           <div className="text-sm text-neutral-400">
-            <p>Bv. Gral. Artigas 2498</p>
             <p>+598 91 461 534</p>
+            <Link
+              href="https://www.instagram.com/aikido_uruguay"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-white"
+            >
+              @aikido_uruguay
+            </Link>
           </div>
         </div>
 

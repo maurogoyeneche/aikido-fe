@@ -31,12 +31,12 @@ const jsonLd = {
   description: "Aikido tradicional en Uruguay. Alumnos directos de Hitohira Saito soke.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Bv. Gral. Artigas 2498",
     addressLocality: "Montevideo",
     addressCountry: "UY",
   },
   telephone: "+598 91 461 534",
   sport: "Aikido",
+  sameAs: ["https://www.instagram.com/aikido_uruguay"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
