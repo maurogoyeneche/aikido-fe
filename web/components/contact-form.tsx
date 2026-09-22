@@ -5,6 +5,7 @@ import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { toast } from "sonner";
+import { ArrowRight, Loader2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -227,9 +228,19 @@ export default function ContactForm() {
             <Button
               type="submit"
               disabled={loading}
-              className="h-11 w-full rounded-none bg-[#0000fe] px-6 font-medium hover:bg-[#0000fe]/90 sm:w-auto"
+              className="group/submit h-12 w-full rounded-none bg-[#0000fe] px-7 text-sm font-medium tracking-wide uppercase transition-colors hover:bg-black disabled:opacity-70 sm:w-auto"
             >
-              {loading ? "Enviando..." : "Enviar"}
+              {loading ? (
+                <>
+                  Enviando
+                  <Loader2 className="size-4 animate-spin" />
+                </>
+              ) : (
+                <>
+                  Enviar mensaje
+                  <ArrowRight className="size-4 transition-transform group-hover/submit:translate-x-1" />
+                </>
+              )}
             </Button>
           </Form>
         )}
