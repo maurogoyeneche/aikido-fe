@@ -33,7 +33,7 @@ export default function Hero() {
             href="/contact"
             className="w-fit rounded-md bg-[#0000fe] px-6 py-3 text-lg font-medium text-white transition hover:bg-[#0033a0]"
           >
-            CONTACTANOS
+            Coordiná tu clase
           </Link>
 
           <div className="mt-10 flex items-center gap-3 border-t border-white/15 pt-6">

@@ -24,12 +24,31 @@ export const metadata: Metadata = {
   description: "Aikido tradicional en Uruguay. Alumnos directos de Hitohira Saito soke.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  name: "Iwama Shinshin Aiki Shuren Kai Uruguay",
+  description: "Aikido tradicional en Uruguay. Alumnos directos de Hitohira Saito soke.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Bv. Gral. Artigas 2498",
+    addressLocality: "Montevideo",
+    addressCountry: "UY",
+  },
+  telephone: "+598 91 461 534",
+  sport: "Aikido",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className="h-full antialiased">
       <body
         className={`${notoSansJP.variable} ${notoSerifJP.variable} flex min-h-full flex-col font-sans`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         {children}
         <Footer />

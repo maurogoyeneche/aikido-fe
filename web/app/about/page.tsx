@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import AboutAiki from "@/components/about-aiki";
+
+export const metadata: Metadata = {
+  title: "Filosofía y linaje | Iwama Shinshin Aiki Shuren Kai",
+  description:
+    "Linaje directo de Morihei Ueshiba, Morihiro Saito y Hitohira Saito soke. Conocé la filosofía del Aikido tradicional que practicamos en Uruguay.",
+};
 
 export default function AboutPage() {
   return (

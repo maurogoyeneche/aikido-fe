@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import ContactForm from "@/components/contact-form";
 import ContactInfo from "@/components/contact-info";
+
+export const metadata: Metadata = {
+  title: "Contacto | Iwama Shinshin Aiki Shuren Kai",
+  description:
+    "Escribinos para coordinar tu clase de Aikido tradicional en Montevideo, Uruguay. Bv. Gral. Artigas 2498.",
+};
 
 export default function ContactPage() {
   return (

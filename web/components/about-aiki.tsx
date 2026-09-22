@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Lineage from "@/components/lineage";
 
 export default function AboutAiki() {
   return (
@@ -31,6 +32,22 @@ export default function AboutAiki() {
             </span>
           </blockquote>
         </div>
+      </article>
+
+      <article className="mb-12 grid w-full grid-cols-1 gap-8 sm:grid-cols-[1fr_220px]">
+        <div>
+          <h4 className="font-heading mb-6 text-sm font-medium tracking-tight text-neutral-500">
+            Linaje
+          </h4>
+          <Lineage />
+        </div>
+        <Image
+          src="/img/aikido-tecnica.jpg"
+          alt="Práctica de técnica en el dojo"
+          width={750}
+          height={1334}
+          className="h-full w-full rounded-none object-cover"
+        />
       </article>
 
       <article className="w-full">
