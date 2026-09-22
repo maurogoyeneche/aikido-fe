@@ -33,9 +33,7 @@ export default function DojoDirectory() {
                   </div>
                   <div className="flex gap-2">
                     <dt className={isActive ? "text-white/50" : "text-neutral-500"}>Horario</dt>
-                    <dd>
-                      {dojo.days.join(" y ")}, {dojo.hours}
-                    </dd>
+                    <dd>{dojo.hours}</dd>
                   </div>
                   <div className="flex gap-2">
                     <dt className={isActive ? "text-white/50" : "text-neutral-500"}>Sensei</dt>
