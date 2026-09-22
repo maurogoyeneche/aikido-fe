@@ -1,41 +1,38 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import type { Dojo } from "@/lib/dojos";
 
 export default function DojoCard({ dojo }: { dojo: Dojo }) {
   return (
-    <Card className="mx-auto my-6 max-w-4xl overflow-hidden">
-      <CardHeader>
-        <h3 className="text-2xl font-bold">{dojo.branch_off}</h3>
-      </CardHeader>
-      <CardContent className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+    <article className="mx-auto my-6 max-w-4xl border-t-2 border-[#0000fe] pt-6">
+      <h3 className="mb-6 text-2xl font-bold text-black">{dojo.branch_off}</h3>
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <iframe
           src={dojo.gmap_src}
           title={`Mapa - ${dojo.branch_off}`}
-          className="h-64 w-full border-0"
+          className="h-64 w-full border border-black/10"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
-        <div className="flex flex-col gap-3">
+        <dl className="grid grid-cols-1 gap-4 content-start">
           <div>
-            <h4 className="font-semibold">Dirección</h4>
-            <p>{dojo.address}</p>
+            <dt className="text-xs font-medium text-neutral-500">Dirección</dt>
+            <dd className="text-base">{dojo.address}</dd>
           </div>
           <div>
-            <h4 className="font-semibold">Teléfono</h4>
-            <p>{dojo.phone}</p>
+            <dt className="text-xs font-medium text-neutral-500">Teléfono</dt>
+            <dd className="text-base">{dojo.phone}</dd>
           </div>
           <div>
-            <h4 className="font-semibold">Días y horarios</h4>
-            <p>
+            <dt className="text-xs font-medium text-neutral-500">Días y horarios</dt>
+            <dd className="text-base">
               {dojo.days.join(" y ")} de {dojo.hours}
-            </p>
+            </dd>
           </div>
           <div>
-            <h4 className="font-semibold">Representante</h4>
-            <p>{dojo.sensei.join(" & ")}</p>
+            <dt className="text-xs font-medium text-neutral-500">Representante</dt>
+            <dd className="text-base">{dojo.sensei.join(" & ")}</dd>
           </div>
-        </div>
-      </CardContent>
-    </Card>
+        </dl>
+      </div>
+    </article>
   );
 }
