@@ -8,23 +8,36 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <h1 className="mb-8 bg-neutral-100 p-3 text-center text-black">
-          Centros de entrenamiento
-        </h1>
+
+      <section className="mx-auto max-w-[1280px] px-6 py-20 lg:px-10">
+        <div className="mb-12 border-t-2 border-[#0000fe] pt-4">
+          <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+            Centros de entrenamiento
+          </h2>
+        </div>
         <DojoList />
       </section>
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <h1 className="mb-8 bg-neutral-100 p-3 text-center text-black">
-          Filosofía
-        </h1>
+
+      <section className="mx-auto max-w-[1280px] px-6 py-20 lg:px-10">
+        <div className="mb-12 border-t-2 border-[#0000fe] pt-4">
+          <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+            Filosofía
+          </h2>
+        </div>
         <AboutAiki />
       </section>
-      <section className="bg-[whitesmoke] py-16">
-        <h1 className="mb-8 p-3 text-center text-black">Contáctanos</h1>
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 sm:grid-cols-2">
-          <ContactForm />
-          <ContactInfo />
+
+      <section className="bg-[whitesmoke] py-20">
+        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div className="mb-12 border-t-2 border-[#0000fe] pt-4">
+            <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
+              Contáctanos
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            <ContactForm />
+            <ContactInfo />
+          </div>
         </div>
       </section>
     </main>

@@ -20,7 +20,7 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10">
+      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 sm:px-10 lg:px-10">
         <div className="flex flex-col gap-6">
           <h1 className="max-w-[11ch] text-5xl font-extrabold leading-[0.95] sm:text-6xl lg:text-7xl">
             Aikido Tradicional
@@ -36,8 +36,8 @@ export default function Hero() {
             CONTACTANOS
           </Link>
 
-          <div className="mt-10 flex flex-col gap-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-neutral-400">
+          <div className="mt-10 flex items-center gap-3 border-t border-white/15 pt-6">
+            <span className="text-sm font-medium text-neutral-400">
               Membresía
             </span>
             <a href="https://paselibre.uy/" target="_blank" rel="noreferrer">
